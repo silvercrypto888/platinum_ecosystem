@@ -12,8 +12,8 @@ The first section of this tutorial requires Python and pandas to be installed. [
 1. Edit the getTop20Holders.bat file and replace Platinum's mint address `ACor5a1JMRsnbMKcibnNZfbY5nfiBg3TwRvWSNUE2DVb` with the _mint address_ of the token whose top 20 holders you want to take a snapshot of.
 3. Run getTop20Holders.bat in Command Prompt
 4. Run json2csv.py in Python. This will generate top20_holders.csv.
-5. The default token supply is 1,000,000,000 (for the total airdrop). If this is fine, skip to step 6. Otherwise, edit calculate_allocations.py and set your desired total token supply for `token_supply`.
-6. Proportional (default) or equal-weighted allocation calculations are supported. There is also a possible exclude list (empty by default, to not exclude any address). If you want a proportional allocation with no excluded addresses: skip to step 7. If you want an equal-weighted allocation, Edit calculate_allocations.py, to set `proportional=0`. If you want to excude addresses, edit calculate_allocations.py and fill in the `excluded_addresses` list using proper Python syntax.
+5. The default token supply is 1,000,000,000 (for the total airdrop). If this is fine, skip this step. Otherwise, edit calculate_allocations.py and set your desired total token supply for `token_supply`.
+6. Proportional (default) or equal-weighted allocation calculations are supported. There is also a possible exclude list (empty by default, to not exclude any address). If you want a proportional allocation with no excluded addresses: skip this step. If you want an equal-weighted allocation, Edit calculate_allocations.py, to set `proportional=0`. If you want to excude addresses, edit calculate_allocations.py and fill in the `excluded_addresses` list using proper Python syntax.
 7. Run calculate_allocations.py to generate allocations.csv. (Tentative, to be continued)
 8. Edit airdrop.bat to replace `MINT_ADDRESS` with _your own token's mint address_. Also, edit `PAYER_KEYPAIR` and `INPUT_FILE` to set your own kepair file and input file (allocations.csv), using _full_ file paths.
 9. Run airdrop.bat
