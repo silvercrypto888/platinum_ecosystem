@@ -4,32 +4,36 @@ This repo has two purposes:
 1. To document open-source code for the Platinum Ecosystem on the X1 Blockchain
 2. To serve as a Newbie Dev Guide for aspiring new X1 devs
 
-The guide will be very simple and assume minimal prior skills, with moderate handholding. :\) The topics covered may go through Token-2022 Extensions and airdrops/snapshots for top 20 holders, but likely no further. This guide can allow aspiring X1 Builders to easily launch nontrivial token ecosystems of their own design. There are also guides for performing highly generous and competitive industry practices (airdrops and burned LP) to help attract a following in the X1 community!
+The guide will be very simple and assume minimal prior skills, with moderate handholding. :\) The topics covered may go through Token-2022 Extensions such as interest rates, and airdrops/snapshots for top 20 holders. However, this guide wil likely go no further. This guide can allow aspiring X1 Builders to easily launch nontrivial token ecosystems of their own design. There are also guides for performing highly generous and competitive industry practices (airdrops and burned LP) to help attract a following in the X1 community!
 
 Familiarity (but not much knowledge) is expected:
-1. Basic familiarity with Windows and Command prompt. This tutorial is primarily intended for Windows users.
+1. Basic familiarity with Windows and Command Prompt. This tutorial is primarily intended for Windows users.
 2. Basic familiarity with blockchains, sending funds, etc.
-(Linux or Windows Subsystem for Linux is very useful for making advanced dApps, but not necessary for this tutorial)
+(Linux or Windows Subsystem for Linux is very useful for making advanced dApps, but is not necessary for this tutorial)
+
+## Dipping Your Toe Into Building on X1
 
 X1 is an SVM-compatible blockchain, which means that devs can use the Solana CLI. To get started wih the CLI:
 
 1. [Install the Solana CLI](https://docs.solanalabs.com/cli/install) using instructions for your OS.
 2. Verify installation: Start Command Prompt (or Linux bash) and type `solana --version`.
 3. Set RPC for X1: `solana config set --url https://rpc.mainnet.x1.xyz`
-4. Generate a keypair: `solana-keygen new`. Do not _ever_ share your secret phrase _or_ keypair.
+4. Generate a keypair: `solana-keygen new`. You can record the secret phrase. Do not _ever_ share your secret phrase _or_ keypair with others.
 
 You can see your wallet address for reference from previous command's output, or by typing: `solana address`
 
-Obtain XNT, X1's native coin. Install the [X1 Wallet](https://chromewebstore.google.com/detail/x1-wallet/kcfmcpdmlchhbikbogddmgopmjbflnae). USDC can be bridged from Solana using the [X1 bridge](https://app.bridge.x1.xyz/). Then swapped to XNT on [XDEX](https://app.xdex.xyz/swap). If you have zero funds for gas, you can join the [X1 Blockchain Telegram](https://t.me/+qPGGU8WFFtczNDEz) and request a tiny amount of XNT for initial gas fees.
+Obtain XNT, X1's native coin, to perform operations. Install the [X1 Wallet](https://chromewebstore.google.com/detail/x1-wallet/kcfmcpdmlchhbikbogddmgopmjbflnae). USDC can be bridged from Solana using the [X1 bridge](https://app.bridge.x1.xyz/). Then swapped to XNT on [XDEX](https://app.xdex.xyz/swap). If you have zero funds for gas, you can join the [X1 Blockchain Telegram](https://t.me/+qPGGU8WFFtczNDEz) and request a tiny amount of XNT for initial gas fees.
 
-You should now have the Solana CLI configured for X1 development, and your wallet should have enough funds to mint tokens on X1.
+You should now have the Solana CLI configured for X1 development, and your wallet should have enough funds to mint tokens on X1. If you have Linux and want to go much further, deploying more advanced programs using cargo, rust, and anchor, there is [a great guide on x1.xyz](https://docs.x1.xyz/build-on-x1/create-programs-on-x1). But that is beyond the scope of this tutorial. Note: that X1.xyz guide still references the testnet, even though X1 is now in mainnet. E.g., The testnet faucet is not necessarily still working.
 
-If you want to launch tokens with no custom behavior, then you can more easily launch them on [XDEX](https://app.xdex.xyz/swap) in the "Mint token" section, although launching such tokens via CLI is possible as an exercise. Regardless of how you launched your token, you can add liquidity in the "Liquidity" section of XDEX. Adding liquidity gives you LP tokens. If you want to "burn" some or all of your LP tokens to increase trust in your token, then send the LP tokens to the incinerator addess: `1nc1nerator11111111111111111111111111111111`
+## Burnt Liquidity and Airdrops
 
-_Disclaimer: Burning tokens is irreversible._ Please carefully check LP tokens before sending them to the incinerator, and keep in mind that liquidity (including your funds deposited in the pool) cannot be withdrawn once the associated LP tokens are burned.
+If you want to launch tokens with no custom behavior, then you can more easily launch them on [XDEX](https://app.xdex.xyz/swap) in the "Mint token" section, although launching such tokens via CLI is possible as an exercise. Regardless of how you launched your token, you can add liquidity in the "Liquidity" section of XDEX. Adding liquidity gives you LP tokens. If you want to "burn" some or all of your LP tokens to increase users' trust in your token, then send the LP tokens to the incinerator addess: `1nc1nerator11111111111111111111111111111111`
 
-If you want to launch tokens with moderately sophisticated behavior then _stay tuned_.
+_Disclaimer: Burning tokens is irreversible._ Please carefully examine LP tokens before sending them to the incinerator, and keep in mind that liquidity (your funds deposited in the pool) cannot be withdrawn once the associated LP tokens are burned. If you plan to withdraw some of the liquidity later, then do not burn all the LP tokens.
 
-There is a very simple airdrop / snapshot scripts folder. It uses some Python scripts, but it has limited functionality even with no Python installation. Future simple guides could feature various Token-2022 Extensions. These extensions are very powerful, and they allow beginner devs to very quickly create tokens with features such as interest rates, soulbound (non-transferable) properties, transfer fees, and so on!
+There is a very simple airdrop / snapshot script folder into this repo. It requires Python in order to use the scripts with more automation, but it has some functionality even with no Python installation. Future simple guides could feature various Token-2022 Extensions. These extensions are very powerful, and they allow beginner devs to very quickly create tokens with features such as interest rates, soulbound (non-transferable) properties, transfer fees, and so on!
+
+If you want to launch tokens with moderately sophisticated behavior, then _stay tuned_.
 
 _Disclaimer: All scripts are highly experimental and have not been thoroughly tested. Please use them with caution._
