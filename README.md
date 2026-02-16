@@ -4,7 +4,7 @@ This repo has two purposes:
 1. To store open-source code for the Platinum Ecosystem on X1 Blockchain
 2. To serve as a Newbie Dev Guide for aspiring new X1 devs
 
-The guide will be very simple and assume minimal prior skills, with moderate handholding. :\) The topics covered may go through Token-2022 Extensons and airdrops/snapshots, but likely no further. This guide can allow aspiring X1 Builders to easily launch nontrivial token ecosystems of their own design, while possibly also performing highly generous and competitive industry practices (airdrops and burned LP) to help attract a following in the X1 community!
+The guide will be very simple and assume minimal prior skills, with moderate handholding. :\) The topics covered may go through Token-2022 Extensions and airdrops/snapshots for top 20 holders, but likely no further. This guide can allow aspiring X1 Builders to easily launch nontrivial token ecosystems of their own design, while possibly also performing highly generous and competitive industry practices (airdrops and burned LP) to help attract a following in the X1 community!
 
 Familiarity (but not much knowledge) is expected:
 1. Basic familiarity with Windows and Command prompt. This tutorial is primarily intended for Windows users.
