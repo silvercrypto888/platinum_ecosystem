@@ -4,7 +4,7 @@ This tutorial (NOT complete) will cover very rudimentary snapshots (and possibly
 
 It is quite simple to take a snapshot of the top 20 holders of a token natively, by making a JSON request to the X1 RPC using Command Prompt. Getting more than the top 20 holders typically requires a significantly more advanced setup.
 
-This tutorial includes optional but highly recommended Python code. [Python can be intalled here](https://www.python.org/downloads/). Then enter `pip install pandas` in Command Prompt, to install pandas for Python.
+This tutorial includes optional but highly recommended Python code. [Python can be installed here](https://www.python.org/downloads/). Then enter `pip install pandas` in Command Prompt, to install pandas for Python.
 
 _There are two sections in this tutorial, based on whether Python is installed or not._ The first section involves Python, and the second does not. This is to accomodate users with different levels of technical literacy.
 
