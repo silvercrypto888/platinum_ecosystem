@@ -1,23 +1,24 @@
 # Platinum Ecosystem on X1 Blockchain, and Newbie Dev Guide
 This repo has two purposes:
 
-1. To store open-source code for the Platinum Ecosystem on X1 Blockchain
+1. To document open-source code for the Platinum Ecosystem on the X1 Blockchain
 2. To serve as a Newbie Dev Guide for aspiring new X1 devs
 
-The guide will be very simple and assume minimal prior skills, with moderate handholding. :\) The topics covered may go through Token-2022 Extensions and airdrops/snapshots for top 20 holders, but likely no further. This guide can allow aspiring X1 Builders to easily launch nontrivial token ecosystems of their own design, while possibly also performing highly generous and competitive industry practices (airdrops and burned LP) to help attract a following in the X1 community!
+The guide will be very simple and assume minimal prior skills, with moderate handholding. :\) The topics covered may go through Token-2022 Extensions and airdrops/snapshots for top 20 holders, but likely no further. This guide can allow aspiring X1 Builders to easily launch nontrivial token ecosystems of their own design. There are also guides for performing highly generous and competitive industry practices (airdrops and burned LP) to help attract a following in the X1 community!
 
 Familiarity (but not much knowledge) is expected:
 1. Basic familiarity with Windows and Command prompt. This tutorial is primarily intended for Windows users.
 2. Basic familiarity with blockchains, sending funds, etc.
 (Linux or Windows Subsystem for Linux is very useful for making advanced dApps, but not necessary for this tutorial)
 
-To get started wih the CLI:
+X1 is an SVM-compatible blockchain, which means that devs can use the Solana CLI. To get started wih the CLI:
 
 1. [Install the Solana CLI](https://docs.solanalabs.com/cli/install) using instructions for your OS.
 2. Verify installation: Start Command Prompt (or Linux bash) and type `solana --version`.
 3. Set RPC for X1: `solana config set --url https://rpc.mainnet.x1.xyz`
 4. Generate a keypair: `solana-keygen new`. Do not _ever_ share your secret phrase _or_ keypair.
-5. Get your wallet address from previous command's output, or by typing: `solana address`
+
+You can see your wallet address for reference from previous command's output, or by typing: `solana address`
 
 Obtain XNT, X1's native coin. Install the [X1 Wallet](https://chromewebstore.google.com/detail/x1-wallet/kcfmcpdmlchhbikbogddmgopmjbflnae). USDC can be bridged from Solana using the [X1 bridge](https://app.bridge.x1.xyz/). Then swapped to XNT on [XDEX](https://app.xdex.xyz/swap). If you have zero funds for gas, you can join the [X1 Blockchain Telegram](https://t.me/+qPGGU8WFFtczNDEz) and request a tiny amount of XNT for initial gas fees.
 
@@ -29,4 +30,6 @@ _Disclaimer: Burning tokens is irreversible._ Please carefully check LP tokens b
 
 If you want to launch tokens with moderately sophisticated behavior then _stay tuned_.
 
-There is a very simple airdrop / snapshot scripts folder. Future simple guides could feature tokens on X1 with various Token-2022 Extensions. These extensions are very powerful, and they allow beginner devs to very quickly create tokens with nontrivial features such as interest rates, transfer fees, soulbound (non-transferable) properties, and so on!
+There is a very simple airdrop / snapshot scripts folder. It uses some Python scripts, but it has limited functionality even with no Python installation. Future simple guides could feature various Token-2022 Extensions. These extensions are very powerful, and they allow beginner devs to very quickly create tokens with features such as interest rates, soulbound (non-transferable) properties, transfer fees, and so on!
+
+_Disclaimer: All scripts are highly experimental and have not been thoroughly tested. Please use them with caution._
