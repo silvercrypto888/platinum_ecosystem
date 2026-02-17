@@ -4,16 +4,17 @@ This repo has two purposes:
 1. To document open-source code for the Platinum Ecosystem on the X1 Blockchain
 2. To serve as a Newbie Dev Guide for aspiring new X1 devs
 
-The guide will be very simple and assume minimal prior skills, with some handholding. :\) The topics covered may go through Token-2022 Extensions such as interest rates, and airdrops/snapshots for top 20 holders. However, this guide will likely go no further than that. This guide can allow aspiring X1 Builders to easily launch token ecosystems with extensions that they desire, like interest rates. This guide also shares how to perform highly generous and competitive industry practices (airdrops and burned LP) to help attract a following in the X1 community!
+The guide will be very simple and assume minimal prior skills, with plenty of handholding. :\) The topics covered may go through Token-2022 Extensions such as interest rates, and airdrops/snapshots for top 20 holders. However, this guide will likely go no further than that. This guide can allow aspiring X1 Builders to easily launch token ecosystems with extensions that they desire, like interest rates. This guide also shares how to perform highly generous and competitive industry practices (airdrops and burned LP) to help attract a following in the X1 community!
 
-Familiarity (but not much knowledge) is expected:
-1. Basic familiarity with Windows and Command Prompt. This tutorial is primarily intended for Windows users.
-2. Basic familiarity with blockchains, sending funds, etc.
-(Linux or Windows Subsystem for Linux is very useful for making advanced dApps, but is not necessary for this tutorial)
+Basic exposure (but not much knowledge and familiarity) is expected with:
+1. Basic exposure to Windows and Command Prompt. This tutorial is primarily intended for Windows users.
+2. Basic exposure to blockchains, crypto wallets, sending funds, etc.
+
+(Basic exposure to programming principles is highly useful for the tutorial, but not strictly necessary. Linux or Windows Subsystem for Linux is very useful for making advanced dApps, but is not necessary for this tutorial)
 
 ## Dipping Your Toe Into Building on X1
 
-X1 is an SVM-compatible blockchain, which means that devs can use the Solana CLI. To get started wih the CLI:
+X1 is an SVM (Solana Virtual Machine) compatible blockchain, which means that devs can use the Solana CLI to build on X1. To get started wih the CLI:
 
 1. [Install the Solana CLI](https://docs.solanalabs.com/cli/install) using instructions for your OS.
 2. Verify installation: Start Command Prompt (or Linux bash) and type `solana --version`.
@@ -32,11 +33,11 @@ If you want to launch tokens with no custom behavior, then you can more easily l
 
 _Disclaimer: Burning tokens is irreversible._ Please carefully examine LP tokens before sending them to the incinerator, and keep in mind that liquidity (your funds deposited in the pool) cannot be withdrawn once the associated LP tokens are burned. If you want the option of withdrawing some liquidity later, don't burn all the LP tokens.
 
-There is a very simple airdrop script folder into this repo. It allows the top 20 holders of a token to be captured via a snapshot, and possibly allows minting of the token using scripts, to execute an airdrop. It requires Python in order to use the scripts with more airdrop automation, but it has some functionality even with no Python installation.
+There is a very simple airdrop script folder into this repo. It allows the top 20 holders of a token to be captured via a snapshot, and potentially allows minting of the token using scripts, to execute an airdrop. It requires Python in order to use the scripts with more automation for airdrop calculations, but it has some guidance even with no Python installation.
 
 Future simple guides could feature various Token-2022 Extensions. These extensions are very powerful, and they allow beginner devs to very quickly create tokens with features such as interest rates, soulbound (non-transferable) properties, transfer fees, and so on!
 
-If you want to launch tokens with moderately sophisticated behavior, then _stay tuned_.
+If you are inetresting in learning to launch tokens with moderately sophisticated behavior, then _stay tuned_.
 
 _Disclaimer: All scripts are highly experimental and have not been thoroughly tested. Please use them with caution._
 
