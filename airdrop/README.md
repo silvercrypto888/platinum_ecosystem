@@ -39,6 +39,6 @@ This is a very crude, manual, tedious way to take the snapshot and do the airdro
 
 Double check the realized airdrop amounts. You can use an explorer such as [Fortiblox](https://explorer.fortiblox.com/) and enter your token's mint address. Ensure that it was done correctly. If it wasn't done correctly, then consider possible remedies, such as a re-launch with proper notice to your community.
 
-Once you have minted and distributed all desired tokens, you can revoke the mint authority by running the command: `spl-token authorize <MINT ADRRESS> mint --disable`, replacing `<MINT ADRRESS>` with your token's actual mint address. _This will permanently and irreversibly remove your ability to mint new tokens._
+Once you have minted and distributed all desired tokens, you can revoke the mint authority by running the command: `spl-token authorize <MINT ADDRESS> mint --disable`, replacing `<MINT ADDRESS>` with your token's actual mint address. _This will permanently and irreversibly remove your ability to mint new tokens._
 
 Revoking mint authority is _extremely_ important for establishing trust with users. Tokens that are mintable are a huge red flag for many potential users. The only exception is an extremely compelling reason for allowing mints, such as custom logic for fair permissionless minting.
