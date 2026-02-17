@@ -17,18 +17,18 @@ _The first section of this tutorial requires Python and pandas to be installed._
 3. Run json2csv.py in Python. This will generate top20_holders.csv.
 4. By default, the token supply is 1,000,000,000 for the total airdrop (summed over all holders), the airdrop is proportional to holdings, and no addresses are excluded. If this is fine, skip the next step. Otherwise:
 5. (optional, unless changes desired) Edit calculate_allocations.py and set your desired total token supply for `TOTAL_AIRDROP_SUPPLY`. Proportional (default) or equal allocation calculations are supported. If you want an equal-weighted allocation, edit calculate_allocations.py to set `DISTRIBUTION_TYPE = "equal"`. There is also a possible exclude list `EXCLUDED_ADDRESSES` (empty by default), which must be filled in with any addresses you would want to exclude.
-6. Run calculate_allocations.py to generate allocations.csv.
-7. _(Experimental)_ Edit airdrop.bat to replace `MINT_ADDRESS` with _your own token's mint address_. Also, edit `PAYER_KEYPAIR` and `INPUT_FILE` to set your own kepair file and input file (allocations.csv), possibly using full file paths.
+6. Run calculate_allocations.py in Python to generate allocations.csv.
+7. _(Experimental)_ Edit airdrop.bat to replace `MINT_ADDRESS` with _your own token's mint address_. Also, edit `PAYER_KEYPAIR` and `INPUT_FILE` to set your own keypair file and input file (allocations.csv), possibly using full file paths.
 8. _(Experimental)_ Run airdrop.bat.
 
 Note: Keep in mind that the top 20 holders can include the incinerator address, LP addresses, team/ecosystem wallets, etc., of the token whose snapshot was taken. These may be optionally and manually excluded from the airdrop by editing calculate_allocations.py, as described above.
 
 ## Alternative (no Python)
 
-This is a very crude, manual, tedious way to take the snapshot and do the airdrop. It is only shared because it requires minimal technical expertise, and it therefore does not involve Python. There is also more handholding here.
+This is a very crude, manual, tedious way to take the snapshot and do the airdrop. It is only shared because it requires minimal technical expertise, and it therefore does not use Python. There is also more handholding here.
 
-1. Edit the getTop20Holders.bat file. (You can do this in Notepad)
-2. Replace Platinum's mint address `ACor5a1JMRsnbMKcibnNZfbY5nfiBg3TwRvWSNUE2DVb` with the _mint address_ of the token whose top 20 holders you want to take a snapshot of, then save it.
+1. Edit the getTop20Holders.bat file. (You can do this in Notepad, or by right-clicking it - > "Edit" in the file explorer)
+2. Replace Platinum's mint address `ACor5a1JMRsnbMKcibnNZfbY5nfiBg3TwRvWSNUE2DVb` with the _mint address_ of the token whose top 20 holders you want to take a snapshot of, then save getTop20Holders.bat.
 3. Run getTop20Holders.bat. You can do this easily by double-clicking it in the file explorer. An alternative is starting Command Prompt, then navigating to its folder using the `cd <folder path>` command with the right folder paths, then entering `getTop20Holders.bat`. Either way, this will create or overwrite top20_holders.json, in the same folder that getTop20Holders.bat is in.
 4. Get the file top20_holders.json. Use a json to csv converter to convert it to a csv file (there are many online and software tools, [like this one](https://convertcsv.com/json-to-csv.htm)).
 5. Load the csv file into Excel as a spreadsheet.
