@@ -16,7 +16,7 @@ _The first section of this tutorial requires Python and pandas to be installed._
 2. Run getTop20Holders.bat in Command Prompt. This will generate top20_holders.json.
 3. Run json2csv.py in Python. This will generate top20_holders.csv.
 4. By default, the token supply is 1,000,000,000 for the total airdrop (summed over all holders), the airdrop is proportional to holdings, and no addresses are excluded. If this is fine, skip the next step. Otherwise:
-5. Edit calculate_allocations.py and set your desired total token supply for `TOTAL_AIRDROP_SUPPLY`. Proportional (default) or equal allocation calculations are supported. If you want an equal-weighted allocation, edit calculate_allocations.py to set `DISTRIBUTION_TYPE = "equal"`. There is also a possible exclude list `EXCLUDED_ADDRESSES` (empty by default), which must be filled in with any addresses you would want to exclude.
+5. (optional, unless changes desired) Edit calculate_allocations.py and set your desired total token supply for `TOTAL_AIRDROP_SUPPLY`. Proportional (default) or equal allocation calculations are supported. If you want an equal-weighted allocation, edit calculate_allocations.py to set `DISTRIBUTION_TYPE = "equal"`. There is also a possible exclude list `EXCLUDED_ADDRESSES` (empty by default), which must be filled in with any addresses you would want to exclude.
 6. Run calculate_allocations.py to generate allocations.csv.
 7. _(Experimental)_ Edit airdrop.bat to replace `MINT_ADDRESS` with _your own token's mint address_. Also, edit `PAYER_KEYPAIR` and `INPUT_FILE` to set your own kepair file and input file (allocations.csv), possibly using full file paths.
 8. _(Experimental)_ Run airdrop.bat.
