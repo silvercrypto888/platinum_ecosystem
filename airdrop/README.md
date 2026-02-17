@@ -18,14 +18,14 @@ _Disclaimer: these scripts are still under development._
 4. (optional, unless changes wanted) Edit calculate_allocations.py and set your desired total token supply for `TOTAL_AIRDROP_SUPPLY`. Proportional (default) or equal allocation calculations are supported. If you want an equal allocation, edit calculate_allocations.py to set `DISTRIBUTION_TYPE = "equal"`. There is also a possible exclude list `EXCLUDED_ADDRESSES` (empty by default), which must be filled in with any addresses you would want to exclude.
 5. Run calculate_allocations.py in Python to generate allocations.csv. This contains the airdrop allocations.
 
+6. Note: Keep in mind that the top 20 holders can include the incinerator address, LP addresses, team/ecosystem wallets, etc., of the token whose snapshot was taken. These may be optionally and manually excluded from the airdrop by editing calculate_allocations.py, as described above.
+
 ## Automatic airdrop (batch file)
 
-**WARNING: airdrop.bat is extremely experimental. airdrop.bat is _only_ intended for a _brand new minted token_, where no one yet holds any tokens. Otherwise, if there are existing holders, it will not work reliably at all.** This is because it attempts to create token accounts for each wallet address in allocations.csv. But if some of those wallets already have token balances (and therefore token accounts), then the script _will_ run into errors and/or highly unpredictable behavior. If you want to modify it for tokens with existing holders, you will likely need to code extensive extra logic, to check if users already have token accounts, while also making new token accounts for wallets without them. **You have been warned.**
+**WARNING: airdrop.bat is extremely experimental and early in development. airdrop.bat is _only_ intended for a _brand new minted token_, where no one yet holds any tokens. Otherwise, if there are existing holders, it will not work reliably at all.** This is because it attempts to create token accounts for each wallet address in allocations.csv. But if some of those wallets already have token balances (and therefore token accounts), then the script _will_ run into errors and/or highly unpredictable behavior. If you want to modify it for tokens with existing holders, you will likely need to code extensive extra logic, to check if users already have token accounts, while also making new token accounts for wallets without them. **You have been warned.**
 
 1. _(Experimental)_ Edit airdrop.bat to replace `MINT_ADDRESS` with _your own token's mint address_. Also, edit `PAYER_KEYPAIR` and `INPUT_FILE` to set your own keypair file and input file (allocations.csv), possibly using full file paths.
 2. _(Experimental)_ Run airdrop.bat.
-
-Note: Keep in mind that the top 20 holders can include the incinerator address, LP addresses, team/ecosystem wallets, etc., of the token whose snapshot was taken. These may be optionally and manually excluded from the airdrop by editing calculate_allocations.py, as described above.
 
 ## Alternative Manual Airdrop (no batch file)
 
