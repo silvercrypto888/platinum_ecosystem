@@ -82,7 +82,7 @@ if __name__ == "__main__":
     # CONFIGURATION
     # You can edit these variables directly or pass them via command line later
     # =========================================================================
-    INPUT_FILE = "top20_holders.csv"
+    INPUT_FILE = "top20wallets.csv"
     OUTPUT_FILE = "allocations.csv"
     
     # Total tokens to give away in this airdrop

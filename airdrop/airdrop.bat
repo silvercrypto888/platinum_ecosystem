@@ -1,8 +1,8 @@
 @echo off
 set RPC_URL="https://rpc.mainnet.x1.xyz"
 set MINT_ADDRESS="<insert mint address here>"
-set PAYER_KEYPAIR=" <insert full keypair file path here>"
-SET "INPUT_FILE= <Insert full csv file path here>"
+set PAYER_KEYPAIR=" <insert keypair file path here>"
+SET "INPUT_FILE= <Insert csv file path here>"
 
 solana config set %PAYER_KEYPAIR%
 
