@@ -14,7 +14,7 @@ Basic exposure (but not much knowledge and familiarity) is expected with:
 
 ## Dipping Your Toe Into Building on X1
 
-X1 is an SVM (Solana Virtual Machine) compatible blockchain, which means that devs can use the Solana CLI to build on X1. To get started wih the CLI:
+X1 is an SVM (Solana Virtual Machine) compatible blockchain, which means that devs can use the Solana CLI to build on X1. To get started with the CLI:
 
 1. [Install the Solana CLI](https://docs.solanalabs.com/cli/install) using instructions for your OS.
 2. Verify installation: Start Command Prompt (or Linux bash) and type `solana --version`.
@@ -29,7 +29,7 @@ You should now have the Solana CLI configured for X1 development, and your walle
 
 ## Burnt Liquidity and Airdrops
 
-If you want to launch tokens with no custom behavior, then you can more easily launch them on [XDEX](https://app.xdex.xyz/swap) in the "Mint token" section, although launching such tokens via CLI is possible as an exercise. Regardless of how you launched your token, you can add liquidity in the "Liquidity" section of XDEX. Adding liquidity gives you LP tokens. If you want to "burn" some or all of your LP tokens to increase users' trust in your token, then send the LP tokens to the incinerator addess: `1nc1nerator11111111111111111111111111111111`
+If you want to launch tokens with no custom behavior, then you can more easily launch them on [XDEX](https://app.xdex.xyz/swap) in the "Mint token" section, although launching such tokens via CLI is possible as an exercise. Regardless of how you launched your token, you can add liquidity in the "Liquidity" section of XDEX. Adding liquidity gives you LP tokens. If you want to "burn" some or all of your LP tokens to increase users' trust in your token, then send the LP tokens to the incinerator address: `1nc1nerator11111111111111111111111111111111`
 
 _Disclaimer: Burning tokens is irreversible._ Please carefully examine LP tokens before sending them to the incinerator, and keep in mind that liquidity (your funds deposited in the pool) cannot be withdrawn once the associated LP tokens are burned. If you want the option of withdrawing some liquidity later, don't burn all the LP tokens.
 
@@ -37,7 +37,7 @@ There is a very simple airdrop script folder into this repo. It allows the top 2
 
 Future simple guides could feature various Token-2022 Extensions. These extensions are very powerful, and they allow beginner devs to very quickly create tokens with features such as interest rates, soulbound (non-transferable) properties, transfer fees, and so on!
 
-If you are inetresting in learning to launch tokens with moderately sophisticated behavior, then _stay tuned_.
+If you are interested in learning to launch tokens with moderately sophisticated behavior, then _stay tuned_.
 
 _Disclaimer: All scripts are highly experimental and have not been thoroughly tested. Please use them with caution._
 
