@@ -10,7 +10,7 @@ Basic exposure (but not much knowledge and familiarity) is expected with:
 1. Basic exposure to Windows and Command Prompt. This tutorial is primarily intended for Windows users.
 2. Basic exposure to blockchains, crypto wallets, sending funds, etc.
 
-(Basic exposure to programming principles is highly useful for the tutorial, but not strictly necessary. Linux or Windows Subsystem for Linux is very useful for making advanced dApps, but is not necessary for this tutorial)
+(Basic exposure to programming principles is highly useful for the tutorial, which includes Python scripts, but it is not strictly necessary. Linux or Windows Subsystem for Linux is very useful for making advanced dApps, but is not necessary for this tutorial)
 
 ## Dipping Your Toe Into Building on X1
 
@@ -33,7 +33,7 @@ If you want to launch tokens with no custom behavior, then you can more easily l
 
 _Disclaimer: Burning tokens is irreversible._ Please carefully examine LP tokens before sending them to the incinerator, and keep in mind that liquidity (your funds deposited in the pool) cannot be withdrawn once the associated LP tokens are burned. If you want the option of withdrawing some liquidity later, don't burn all the LP tokens.
 
-There is a very simple airdrop script folder into this repo. It allows the top 20 holders of a token to be captured via a snapshot, and potentially allows minting of the token using scripts, to execute an airdrop. It requires Python in order to use the scripts with more automation for airdrop calculations, but it has some guidance even with no Python installation.
+There is a very simple airdrop script folder into this repo. It allows the top 20 holders of a token to be captured via a snapshot, and potentially allows minting of the token using scripts, to execute an airdrop. It requires Python to be installed in order to use the scripts.
 
 Future simple guides could feature various Token-2022 Extensions. These extensions are very powerful, and they allow beginner devs to very quickly create tokens with features such as interest rates, soulbound (non-transferable) properties, transfer fees, and so on!
 
