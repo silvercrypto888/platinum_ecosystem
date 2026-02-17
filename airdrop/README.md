@@ -2,11 +2,11 @@
 
 This tutorial will cover very rudimentary snapshots (and possibly airdrop scripts later). _Disclaimer: This tool is still under active development, and some files are experimental._
 
-It is quite simple to take a snapshot of the top 20 holders of a token natively, by making a JSON request to the X1 RPC using Command Prompt. Getting more than the top 20 holders typically requires a significantly more advanced scripting or programming environment.
+It is relatively simple to take a snapshot of the top 20 holders of a token natively even using Command Prompt, by making a JSON request to the X1 RPC. Getting more than the top 20 holders typically requires a much more advanced scripting or programming environment.
 
-This tutorial includes optional but highly recommended Python code. _There are two sections in this tutorial, based on whether Python is installed or not._ The first section requires Python, and the second does not. This is to accomodate users with different levels of technical literacy.
+This tutorial includes optional but highly recommended Python code. _There are two sections in this tutorial, based on whether Python is installed or not. The first section requires Python, and the second does not._ This is to accomodate users with different levels of technical literacy.
 
-The first section of this tutorial requires Python and pandas to be installed. [Python can be installed here](https://www.python.org/downloads/). After that, enter `pip install pandas` in Command Prompt, to install pandas for Python. This tutorial will also include a variety of scripts (not an all-in-one program), to increase modularity and versatility for new devs. For example, not all users may be able to use all the scripts, they but could still find some of them useful.
+_The first section of this tutorial requires Python and pandas to be installed._ [Python can be installed here](https://www.python.org/downloads/). After that, enter `pip install pandas` in Command Prompt, to install pandas for Python. This tutorial will also include a variety of scripts (not an all-in-one program), to increase modularity and versatility for new devs. For example, not all users may be able to use all the scripts, they but could still find some of them useful.
 
 ## Systematic snapshot and airdrop (requires Python)
 
@@ -15,7 +15,7 @@ The first section of this tutorial requires Python and pandas to be installed. [
 1. Edit the getTop20Holders.bat file and replace Platinum's mint address `ACor5a1JMRsnbMKcibnNZfbY5nfiBg3TwRvWSNUE2DVb` with the _mint address_ of the token whose top 20 holders you want to take a snapshot of.
 2. Run getTop20Holders.bat in Command Prompt. This will generate top20_holders.json.
 3. Run json2csv.py in Python. This will generate top20_holders.csv.
-4. By default, the token supply is 1,000,000,000 for the total airdrop, the airdrop is proportional to holdings, and no addresses are excluded. If this is fine, skip the next step. Otherwise:
+4. By default, the token supply is 1,000,000,000 for the total airdrop (summed over all holders), the airdrop is proportional to holdings, and no addresses are excluded. If this is fine, skip the next step. Otherwise:
 5. Edit calculate_allocations.py and set your desired total token supply for `TOTAL_AIRDROP_SUPPLY`. Proportional (default) or equal allocation calculations are supported. If you want an equal-weighted allocation, edit calculate_allocations.py to set `DISTRIBUTION_TYPE = "equal"`. There is also a possible exclude list `EXCLUDED_ADDRESSES` (empty by default), which must be filled in with any addresses you would want to exclude.
 6. Run calculate_allocations.py to generate allocations.csv.
 7. _(Experimental)_ Edit airdrop.bat to replace `MINT_ADDRESS` with _your own token's mint address_. Also, edit `PAYER_KEYPAIR` and `INPUT_FILE` to set your own kepair file and input file (allocations.csv), possibly using full file paths.
@@ -25,15 +25,15 @@ Note: Keep in mind that the top 20 holders can include the incinerator address, 
 
 ## Alternative (no Python)
 
-This is a very crude, manual, tedious way to take the snapshot and do the airdrop. It is only shared because it requires minimal technical expertise.
+This is a very crude, manual, tedious way to take the snapshot and do the airdrop. It is only shared because it requires minimal technical expertise, and it therefore does not involve Python. There is also more handholding here.
 
-1. Edit the getTop20Holders.bat file
-2. Replace Platinum's mint address `ACor5a1JMRsnbMKcibnNZfbY5nfiBg3TwRvWSNUE2DVb` with the _mint address_ of the token whose top 20 holders you want to take a snapshot of.
-3. Run getTop20Holders.bat in Command Prompt
+1. Edit the getTop20Holders.bat file. (You can do this in Notepad)
+2. Replace Platinum's mint address `ACor5a1JMRsnbMKcibnNZfbY5nfiBg3TwRvWSNUE2DVb` with the _mint address_ of the token whose top 20 holders you want to take a snapshot of, then save it.
+3. Run getTop20Holders.bat. You can do this easily by double-clicking it in the file explorer. An alternative is starting Command Prompt, then navigating to its folder using the `cd <folder path>` command with the right folder paths, then entering `getTop20Holders.bat`. Either way, this will create or overwrite top20_holders.json, in the same folder that getTop20Holders.bat is in.
 4. Get the file top20_holders.json. Use a json to csv converter to convert it to a csv file (there are many online and software tools, [like this one](https://convertcsv.com/json-to-csv.htm)).
 5. Load the csv file into Excel as a spreadsheet.
-6. Calculate a particular airdrop allocation (equal, proportional, etc.) in the spreadsheet.
-7. Airdrops can be done _very_ manually by minting tokens into a single wallet and then sending desired amounts of tokens to each address by sending them in the X1 Wallet, using the spreadsheet as a reference.
+6. Calculate a particular airdrop allocation (equal, proportional, etc.) in the Excel spreadsheet. You can calculate a proportional airdrop by multiplying all token holder amounts by this number: _Desired total airdrop amount / sum of all token holdings across eligible top 20 holders_. Exclusions can also be done manually by dropping rows.
+7. Airdrops can be done manually by minting tokens into a single wallet, and then sending desired amounts of tokens to each address by sending them in the X1 Wallet, using the spreadsheet as a reference.
 
 ## Finishing up
 
