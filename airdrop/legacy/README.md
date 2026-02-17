@@ -1,0 +1,1 @@
+This is legacy code from an initial attempt that only found the ATAs of the top 20 holders but not their actual wallet addresses. It was  just archived here for reference, but it is not production ready.
