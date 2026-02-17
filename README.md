@@ -39,3 +39,5 @@ Future simple guides could feature various Token-2022 Extensions. These extensio
 If you want to launch tokens with moderately sophisticated behavior, then _stay tuned_.
 
 _Disclaimer: All scripts are highly experimental and have not been thoroughly tested. Please use them with caution._
+
+License: This code and guide is in the public domain.
