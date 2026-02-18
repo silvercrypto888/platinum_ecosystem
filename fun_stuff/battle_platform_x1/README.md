@@ -73,7 +73,7 @@ X1 has saved the entire world, with help from the Alchemists.`
 
 How did the X1 community gain a score of virtually _two quadrillion_? The answer is because its _Network Power_ was proportional to its already high number of users (15 million) _squared_, creating absolutely astronomical scores. This made the X1 community powerful enough to even defeat HYPERINFLATION in simulated combat.
 
-Lanchester's Laws _greatly simplify_ combat simulation for massive battles involving millions or even _billions of participants_, without having to simulate each agent's combat individually. This allows instant combat resolution, even in a very large multiplayer match for an onchain strategy game. Modifications and extensions of Lanchester's equations can even simulate the remaining army forces from massive battles, not just the win or loss itself.
+Lanchester's Laws _greatly simplify_ combat simulation for massive battles involving millions or even _billions of participants_, without having to simulate each agent's combat individually. This allows instant combat resolution, even in a very large multiplayer match for an onchain strategy game. Extensions of Lanchester's equations can even simulate the remaining army forces from massive battles, not just the win or loss itself.
 
 ![The Alchemist holds the entire world in his hands. Did you notice that there was a burning Phoenix nearby? Interesting...](images/4.png)
 
