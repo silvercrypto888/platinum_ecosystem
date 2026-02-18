@@ -11,6 +11,8 @@ HYPERINFLATION also represents something far larger, something that's hidden and
 
 The X1 Battle platform uses precise mathematical laws of network scaling and military tactics to calculate scenarios where X1 can grow so large, it can even challenge HYPERINFLATION itself, to save the entire world from his wrath.
 
+![HYPERINFLATION, the JUGGLING TYRANT](images/1.png)
+
 # Power Levels
 
 The X1 Battle Platform uses quadratic power scaling. This means that power is proportional not to quantity, but to _quantity squared_. This creates a _strong parallel_ between the quadratic scaling of [Metcalfe's Law](https://en.wikipedia.org/wiki/Metcalfe's_law) and [Lanchester's Square Law](https://en.wikipedia.org/wiki/Lanchester's_laws), to create a _Metcalfe-Lanchester power score_.
@@ -72,6 +74,8 @@ X1 has saved the entire world, with help from the Alchemists.`
 How did the X1 community gain a score of virtually _two quadrillion_? The answer is because its _Network Power_ was proportional to its already high number of users (15 million) _squared_, creating absolutely astronomical scores, powerful enough to even defeat HYPERINFLATION in simulated comabt.
 
 Also, note that Lanchester's Laws _greatly simplify_ the simulation of combat for massive battles involving even _millions of participants_, without having to simulate each agent and their combat individually. This allows quick determination of who can win, in even a very large multiplayer match for an onchain strategy game. Modifications and extensions of Lanchester's equations can even simulate casualties from massive battles, not just the outcomes themselves.
+
+![The Alchemist holds the entire world in his hands. Did you notice that there was a burning Phoenix nearby? Interesting...](images/4.png)
 
 # Possible Extensions
 
