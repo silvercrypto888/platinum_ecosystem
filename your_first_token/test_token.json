@@ -1,0 +1,21 @@
+{
+  "name": "DON'T BUY!!! Nuclear Waste!!!",
+  "symbol": "WASTE",
+  "description": "DO NOT BUY THIS TOKEN!!! DO NOT BUY THIS TOKEN!!! DO NOT BUY THIS TOKEN!!! THIS TOKEN IS ONLY FOR EXPERIMENTAL TESTING! If you buy this token, you may run into highly untested token behavior, almost like getting radiation sickness from nuclear experiments.",
+  "image": "https://working-ivory-dove.myfilebase.com/ipfs/QmQ29oVoVAU9RuhRdYefZGhvbPsaDMfvNnqDQv7Ayy7GkS",
+  "attributes": [
+    {
+      "trait_type": "Category",
+      "value": "DeFi"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://working-ivory-dove.myfilebase.com/ipfs/QmQ29oVoVAU9RuhRdYefZGhvbPsaDMfvNnqDQv7Ayy7GkS",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
+}

@@ -1,0 +1,8 @@
+Creating token 5jMB5dWfLLUfmcH7ao1i2q7Y1LcQk7rrLpowD2DmSk6B under program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb
+To initialize metadata inside the mint, please run `spl-token initialize-metadata 5jMB5dWfLLUfmcH7ao1i2q7Y1LcQk7rrLpowD2DmSk6B <YOUR_TOKEN_NAME> <YOUR_TOKEN_SYMBOL> <YOUR_TOKEN_URI>`, and sign with the mint authority.
+
+Address:  5jMB5dWfLLUfmcH7ao1i2q7Y1LcQk7rrLpowD2DmSk6B
+Decimals:  9
+
+Signature: 4Ucgo9YzUdxstgqH7yu8nZDnShjNkwz8XVcScsavvVJzfvcaoxcpV16hzpY9fXScEeV4AuuSnd4ApJoYzcuL4frg
+
