@@ -4,7 +4,7 @@ This repo has two purposes:
 1. To document open-source code for the Platinum Ecosystem on the X1 Blockchain
 2. To serve as a Newbie Dev Guide for aspiring new X1 devs
 
-The guide will be very simple and assume minimal prior skills, with plenty of handholding. :\) The topics covered may go through Token-2022 Extensions such as interest rates, and airdrops/snapshots for top 20 holders. However, this guide will likely go no further than that. This guide can allow aspiring X1 Builders to easily launch token ecosystems with extensions that they desire, like interest rates.
+The guide will be very simple and assume minimal prior skills, with plenty of handholding. :\) The topics covered may go through minting simple tokens with no custom features, and then Token-2022 Extensions such as interest rates, and airdrops/snapshots for top 20 holders. However, this guide will likely go no further than that. This guide can allow aspiring X1 Builders to easily launch token ecosystems with extensions that they desire, like interest rates.
 
 This guide also shares some game theory on practices that can help builders to distinguish themselves from _extractors_ (shortsighted devs). This guide will tell you how to perform highly generous and competitive industry practices (airdrops and burned liquidity) to help attract a following in the X1 community!
 
@@ -31,13 +31,15 @@ You should now have the Solana CLI configured for X1 development, and your walle
 
 ## Burnt Liquidity and Airdrops
 
-If you want to launch tokens with no custom behavior, then you can more easily launch them on [XDEX](https://app.xdex.xyz/swap) in the "Mint token" section, although launching such tokens via CLI is possible as an exercise. Regardless of how you launched your token, you can add liquidity in the "Liquidity" section of XDEX. Adding liquidity gives you LP tokens. If you want to "burn" some or all of your LP tokens to increase users' trust in your token, then send the LP tokens to the incinerator address: `1nc1nerator11111111111111111111111111111111`
+If you want to launch tokens with no custom behavior, then you can more easily launch them on [XDEX](https://app.xdex.xyz/swap) in the "Mint token" section. However, launching such tokens via CLI is possible as an exercise to learn more about the Solana CLI, and the "Your First Token" guide in [this folder](/your_first_token) shows how to do that.
+
+You can add liquidity in the "Liquidity" section of XDEX. Adding liquidity gives you LP tokens. If you want to "burn" some or all of your LP tokens to increase users' trust in your token, then send the LP tokens to the incinerator address: `1nc1nerator11111111111111111111111111111111`
 
 _Disclaimer: Burning tokens is irreversible._ Please carefully examine LP tokens before sending them to the incinerator, and keep in mind that liquidity (your funds deposited in the pool) cannot be withdrawn once the associated LP tokens are burned. If you want the option of withdrawing some liquidity later, don't burn all the LP tokens.
 
 The game theory for why you would burn liquidity: it is a credible onchain signal that you can't withdraw all liquidity in a "rug pull". If an extractor withdraws all liquidity, then it can cause the token to become instantly worthless. This is why many users prefer burned liquidity.
 
-There is a very simple airdrop script folder into this repo. It allows the top 20 holders of a token to be captured via a snapshot, and experimentally allows minting of the token using scripts, to execute an airdrop. It requires Python to be installed in order to use the scripts.
+There is a very simple [airdrop script folder](/airdrop) into this repo. It allows the top 20 holders of a token to be captured via a snapshot, and experimentally allows minting of the token using scripts, to execute an airdrop. It requires Python to be installed in order to use the scripts.
 
 Future simple guides could feature various Token-2022 Extensions. These extensions are very powerful, and they allow beginner devs to very quickly create tokens with features such as interest rates, soulbound (non-transferable) properties, transfer fees, and so on!
 
