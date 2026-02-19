@@ -29,7 +29,7 @@ Obtain XNT, X1's native coin, to perform operations. Install the [X1 Wallet](htt
 
 You should now have the Solana CLI configured for X1 development, and your wallet should have enough funds to mint tokens on X1. If you have Linux or WSL and want to go much further, deploying highly advanced programs using Anchor, there is [a great guide on x1.xyz](https://docs.x1.xyz/build-on-x1/create-programs-on-x1). But that is beyond the scope of this tutorial. Note: that X1.xyz guide still references the testnet, even though X1 is now in mainnet. E.g., The official testnet faucet is not necessarily still working. Xen_artist has a [community testnet faucet](https://faucet.x1.wiki/).
 
-## Burnt Liquidity and Airdrops
+## Minting Simple Tokens, Burnt Liquidity, and Airdrops
 
 If you want to launch tokens with no custom behavior, then you can more easily launch them on [XDEX](https://app.xdex.xyz/swap) in the "Mint token" section. However, launching such tokens via CLI is possible as a learning exercise, and the "Your First Token" guide in [this folder](/your_first_token) shows how to do it.
 
@@ -39,7 +39,7 @@ _Disclaimer: Burning tokens is irreversible._ Please carefully examine LP tokens
 
 The game theory for why you would burn liquidity: it is a credible onchain signal that you can't withdraw all liquidity in a "rug pull". If an extractor withdraws all liquidity, then it can cause the token to become instantly worthless. This is why many users prefer burned liquidity.
 
-There is a very simple [airdrop script folder](/airdrop) into this repo. It allows the top 20 holders of a token to be captured via a snapshot, and experimentally allows minting of the token using scripts, to execute an airdrop. It requires Python to be installed in order to use the scripts.
+There is a very simple [airdrop script folder](/airdrop) into this repo. It allows the top 20 holders of a token to be captured via a snapshot, and experimentally allows minting additional usits of your token using scripts, to execute an airdrop. It requires Python to be installed in order to use the scripts.
 
 Future simple guides could feature various Token-2022 Extensions. These extensions are very powerful, and they allow beginner devs to very quickly create tokens with features such as interest rates, soulbound (non-transferable) properties, transfer fees, and so on!
 
