@@ -41,9 +41,13 @@ The game theory for why you would burn liquidity: it is a credible onchain signa
 
 There is a very simple [airdrop script folder](/airdrop) into this repo. It allows the top 20 holders of a token to be captured via a snapshot, and experimentally allows minting additional usits of your token using scripts, to execute an airdrop. It requires Python to be installed in order to use the scripts.
 
+## Going Forward
+
 Future simple guides could feature various Token-2022 Extensions. These extensions are very powerful, and they allow beginner devs to very quickly create tokens with features such as interest rates, soulbound (non-transferable) properties, transfer fees, and so on!
 
 If you are interested in learning to launch tokens with these moderately sophisticated behaviors, then _stay tuned_.
+
+## Legalese
 
 _Disclaimer: All scripts are under development and have not been thoroughly tested. Some are even experimental. Please use them with caution._
 
