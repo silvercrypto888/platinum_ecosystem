@@ -12,7 +12,7 @@ Basic exposure (but not much knowledge and familiarity) is expected with:
 1. Basic exposure to Windows and Command Prompt. This tutorial is primarily intended for Windows users.
 2. Basic exposure to blockchains, crypto wallets, sending funds, etc.
 
-(Basic exposure to programming principles is highly useful for the tutorial, which includes Python scripts, but it is not strictly necessary. Linux or Windows Subsystem for Linux is very useful for making advanced dApps, but is not necessary for this tutorial)
+(Basic exposure to programming principles is useful in particular for the airdrop / snapshot tool (which uses Python), but not needed. Linux or Windows Subsystem for Linux is very useful for making advanced dApps, but is not needed for this tutorial)
 
 ## Dipping Your Toe Into Building on X1
 
@@ -31,7 +31,7 @@ You should now have the Solana CLI configured for X1 development, and your walle
 
 ## Burnt Liquidity and Airdrops
 
-If you want to launch tokens with no custom behavior, then you can more easily launch them on [XDEX](https://app.xdex.xyz/swap) in the "Mint token" section. However, launching such tokens via CLI is possible as an exercise to learn more about the Solana CLI, and the "Your First Token" guide in [this folder](/your_first_token) shows how to do that.
+If you want to launch tokens with no custom behavior, then you can more easily launch them on [XDEX](https://app.xdex.xyz/swap) in the "Mint token" section. However, launching such tokens via CLI is possible as a learning exercise, and the "Your First Token" guide in [this folder](/your_first_token) shows how to do it.
 
 You can add liquidity in the "Liquidity" section of XDEX. Adding liquidity gives you LP tokens. If you want to "burn" some or all of your LP tokens to increase users' trust in your token, then send the LP tokens to the incinerator address: `1nc1nerator11111111111111111111111111111111`
 
