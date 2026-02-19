@@ -24,11 +24,11 @@ Where the placeholder variables surrounded by `%` symbols will be filled in with
 
 # What if the metadata initialization got screwed up, or if I wanted to change something later?
 
-Don't worry. Metadata is mutable by default. This means you can always just change it later (assuming you don't go out of your way to revoke that permission). If you later want to update the metadata (after first initialization) using the metadata.bat script, you will first need to edit it as follows:
+Don't worry. Metadata is mutable by default. This means you can always just change it later (assuming you don't go out of your way to revoke that permission). If you later want to update the metadata (after first initialization) using the create_metadata.bat script, you will first need to edit it as follows:
 
 1. Find the line `spl-token initialize-metadata %MINT_ADDRESS% "%T_NAME%" "%T_TICKER%" "%T_URI%"`
 2. Replace with `spl-token update-metadata %MINT_ADDRESS% "%T_NAME%" "%T_TICKER%" "%T_URI%"`
-3. Save metadata.bat, then run it again and enter the metadata fields again, with updated values.
+3. Save create_metadata.bat, then run it again and enter the metadata fields again, with updated values.
 
 # What next?
 
