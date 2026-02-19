@@ -9,7 +9,7 @@ It is a battle simulator to run future scenarios where the _entire X1 community_
 
 HYPERINFLATION also represents something far larger, something that's hidden and even sinister: he is a symbol for the systematic destruction of value through high quantity, but terrible quality. These days, far too many posers and crying boys try to rule over genuine builders. Far too many firms ship broken products that suffer from shrinkflation. The X1 community is engaged in a fight against _mediocrity itself_.
 
-The X1 Battle platform uses precise mathematical laws of network scaling and military tactics to calculate scenarios where X1 can grow so large, it can even challenge HYPERINFLATION itself, to save the entire world from his wrath.
+The Battle Platform for X1 uses precise mathematical laws of network scaling and military tactics to calculate scenarios where X1 can grow so large, it can even challenge HYPERINFLATION itself, to save the entire world from his wrath.
 
 ![HYPERINFLATION, the JUGGLING TYRANT](images/1.png)
 
