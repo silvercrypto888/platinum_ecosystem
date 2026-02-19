@@ -39,4 +39,4 @@ Once you have minted and distributed all desired tokens, you can revoke the mint
 
 Revoking mint authority is _extremely_ important for establishing trust with users. Mintable tokens are a huge red flag for many potential users. The only exception is an extremely compelling reason for allowing mints, such as custom logic for fair permissionless minting.
 
-The game theory behind this: If a token is mintable, then an extractor can mint millions of tokens, and then sell them to the liquidity pool to instantly drain its funds, even if the LP tokens are burned. Revoking mint authority is a clear signal that you can no longer do a rug pull like that.
+The game theory behind this: If a token is mintable, then an extractor can mint billions of tokens, and then sell them to the liquidity pool to instantly drain its funds, even if the LP tokens are burned. Revoking mint authority is a clear signal that you can no longer do a rug pull like that.
