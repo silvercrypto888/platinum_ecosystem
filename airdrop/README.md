@@ -1,6 +1,8 @@
 # Airdrops and Snapshots
 
-This tutorial will cover very rudimentary snapshots (and possibly airdrop scripts later). _Disclaimer: This project is still under active development, and some files are experimental._
+This tutorial will cover very rudimentary snapshots and airdrops. Note that the airdrop tool is experimental, and it will not work for tokens launched on XDEX. The airdrop tool can only work for tokens launched via Solana CLI.
+
+_Disclaimer: This project is still under active development, and some files are experimental._
 
 It is relatively simple to take a snapshot of the top 20 holders of a token, by making a `getTokenLargestAccounts` JSON request to the X1 RPC in Python, then mapping the ATAs (Associated Token Addresses) to their personal wallets. The `get_holders.py` script does this with minimal configuration needed. Getting more than the top 20 holders typically requires a much more advanced scripting or programming environment.
 
@@ -20,7 +22,7 @@ Note: Keep in mind that the top 20 holders can include the incinerator address, 
 
 ## Automatic airdrop (batch file)
 
-**WARNING: airdrop.bat is extremely experimental and very early in development. airdrop.bat is _only_ intended for a _brand new minted token_, where no one yet holds any tokens. Otherwise, if there are existing holders, it will not work reliably at all.** This is because it attempts to create token accounts for each wallet address in allocations.csv. But if some of those wallets already have token balances (and therefore token accounts), then the script _will_ run into errors and/or highly unpredictable behavior. If you want to modify it for tokens with existing holders, you will likely need to code extensive extra logic, to check if users already have token accounts, while also making new token accounts for wallets without them. **You have been warned.**
+**WARNING: airdrop.bat is extremely experimental and very early in development. airdrop.bat is _only_ intended for a _brand new minted token_, where no one yet holds any tokens. Otherwise, if there are existing holders, it will not work reliably at all.** This is because it attempts to create token accounts for each wallet address in allocations.csv. But if some of those wallets already have token balances (and therefore token accounts), then the script _will_ run into errors and/or unpredictable behavior. If you want to modify it for tokens with existing holders, you might want to code extensive extra logic, to check if users already have token accounts, while also making new token accounts for wallets without them. **You have been warned.**
 
 1. _(Experimental)_ Edit airdrop.bat to replace `MINT_ADDRESS` with _your own token's mint address_. Also, edit `PAYER_KEYPAIR` and `INPUT_FILE` to set your own keypair file and input file (allocations.csv), possibly using full file paths.
 2. _(Experimental)_ Run airdrop.bat.
@@ -33,6 +35,8 @@ This is a very crude, manual, tedious way to do the airdrop. It is only mentione
 
 Double check the realized airdrop amounts. You can use an explorer such as [Fortiblox](https://explorer.fortiblox.com/) and enter your token's mint address. Ensure that it was done correctly. If it wasn't done correctly, then consider possible remedies, such as a re-launch with proper notice to your community. Alternatively, if only a handful of users had missed their airdrop, you could manually do a second mint / airdrop just to accomodate them.
 
-Once you have minted and distributed all desired tokens, you can revoke the mint authority by running the command: `spl-token authorize <MINT ADDRESS> mint --disable`, replacing `<MINT ADDRESS>` with your token's actual mint address. _Disclaimer: This will permanently and irreversibly remove your ability to mint new tokens._
+Once you have minted and distributed all desired tokens, you can revoke the mint authority by opening Command Prompt and running this command: `spl-token authorize <MINT ADDRESS> mint --disable`, replacing `<MINT ADDRESS>` with your token's actual mint address. _Disclaimer: This will permanently and irreversibly remove your ability to mint new tokens._
 
-Revoking mint authority is _extremely_ important for establishing trust with users. Mintable tokens are a huge red flag for many potential users. The only exception is an extremely compelling reason for allowing mints, such as custom logic for fair permissionless minting. The game theory behind this: If an extractor mints a quadrillion tokens and then sells them to the liqudity pool, they can instantly drain it, even if the LP tokens are burned. Revoking mint authority is a clear signal that you can no longer do that.
+Revoking mint authority is _extremely_ important for establishing trust with users. Mintable tokens are a huge red flag for many potential users. The only exception is an extremely compelling reason for allowing mints, such as custom logic for fair permissionless minting.
+
+The game theory behind this: If a token is mintable, then an extractor can mint a quadrillion tokens and then sell them to the liqudity pool and instantly drain it, even if the LP tokens are burned. Revoking mint authority is a clear signal that you can no longer do a rug pull like that.
