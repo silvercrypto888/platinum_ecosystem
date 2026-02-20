@@ -12,7 +12,7 @@ This tutorial will also include a few scripts (not an all-in-one program), to in
 
 ## Systematic snapshot (requires Python)
 
-1. Edit get_holders.py, replacing Platinum's mint address `ACor5a1JMRsnbMKcibnNZfbY5nfiBg3TwRvWSNUE2DVb` in `mint_address = "ACor5a1JMRsnbMKcibnNZfbY5nfiBg3TwRvWSNUE2DVb"` with _the mint address of the token whose snapshot you want to capture_.
+1. Edit get_holders.py, replacing Platinum's mint address `ACor5a1JMRsnbMKcibnNZfbY5nfiBg3TwRvWSNUE2DVb` in `MINT_ADDRESS = "ACor5a1JMRsnbMKcibnNZfbY5nfiBg3TwRvWSNUE2DVb"` with _the mint address of the token whose snapshot you want to capture_.
 2. Run get_holders.py in Python. This will generate top20wallets.csv, which contains wallet token amounts for the top 20 holders.
 3. By default, the token supply is 1,000,000,000 for the total airdrop allocation (summed over all holders), the airdrop is proportional to holdings, and no addresses are excluded. If this is fine, skip the next step. Otherwise:
 4. (optional, unless changes wanted) Edit calculate_allocations.py and set your desired total token supply for `TOTAL_AIRDROP_SUPPLY`. Proportional (default) or equal allocation calculations are supported. If you want an equal allocation, edit calculate_allocations.py to set `DISTRIBUTION_TYPE = "equal"`. There is also a possible exclude list `EXCLUDED_ADDRESSES` (empty by default), which must be filled in with any addresses you would want to exclude.
