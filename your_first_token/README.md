@@ -4,7 +4,7 @@ This guide will launch a very simple Token-2022 token with no custom logic, usin
 
 **Prerequisites:** You must have already installed the Solana CLI, with the RPC and keypair configured appropriately. You must also have some XNT in your address (the one associated with your Solana CLI keypair) to cover gas fees.
 
-# Creating the token
+## Creating the token
 
 You can create the token by running `create_token.bat`. It will create the token on X1 and create `mint_address.txt`, which has your token's _mint address_. By default, it will use a precision of 9 decimal places (which is very common).
 
@@ -12,11 +12,11 @@ The batch file has lots of logging code, but the key command is just this:
 
 `spl-token create-token --program-id TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb --decimals 9 --enable-metadata`
 
-# Setting up Metadata
+## Setting up Metadata
 
 Metadata will give your token a name, ticker, and image.
 
-## Preliminaries
+### Preliminaries
 
 This part is tedious, but it's very highly recommended. That's because it's needed if you want the token to have an image:
 
@@ -27,7 +27,7 @@ This part is tedious, but it's very highly recommended. That's because it's need
 4. Upload and pin the json file to IPFS.
 5. Copy the IPFS uri for your json file for reference, for the next section.
 
-## Initializing the Metadata
+### Initializing the Metadata
 
 1. Run `create_metadata.bat` (not `update_metadata.bat`). It will read `mint_address.txt` (if generated earlier). Then it will ask you for the name, ticker, and metadata URI.
 2. You provide these fields by typing (or copy-pasting) them and then pressing "Enter" for each prompt. When prompted, you should enter the metadata URI for the json file that you had earlier pinned to IPFS.
@@ -38,7 +38,7 @@ The batch file's key role is to run the command:
 
 Where the placeholder variables with `%` symbols will be automatically filled in with the appropriate values.
 
-# What if the metadata initialization got screwed up? Or if I wanted to change metadata later?
+## What if the metadata initialization got screwed up? Or if I wanted to change metadata later?
 
 Don't worry. Metadata is mutable: you have the authority to change it by default. This means you can always just change it later (assuming you don't deliberately revoke your authority).
 
@@ -54,7 +54,7 @@ spl-token update-metadata %MINT_ADDRESS% uri "%T_URI%"
 
 Where the placeholder variables with `%` symbols will be automatically filled in with the appropriate values.
 
-# What next?
+## What next?
 
 You created the token, but currently it has a supply of 0, because none of it was minted yet. You may be asking how to issue a larger supply to get this token into the hands of more holders. That is a _very_ good question.
 
