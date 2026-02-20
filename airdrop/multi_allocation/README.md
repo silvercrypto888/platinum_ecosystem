@@ -65,8 +65,8 @@ There are four different allocation combinations of the different options for `w
 
 4. `within_community_allocation = "proportional"`, `combine_allocations_method = "sum"`: This allocates tokens proportionally across top 20 holders in each community, and the allocations are combined for each user to sum their allocations for all communities. This effectively means that if a user is a very high-ranked holder in one community, or if they are high-ranked enough in many different communities (top 20 holder in each), they could get an especially high allocation.
 
+As an applied example, Combination 1 can allocate equal amounts of tokens to: anyone who is a top 20 holder of either Platinum or X1 Xen, or both. However, it does this without giving extra tokens to anyone who is a top 20 holder of both tokens.
+
 Note that if `combine_allocations_method = "max"`, then the sum over final combined allocations will likely not be equal to the sum of allocations for the communities themselves. This is because individuals' lower qualifying allocations in other communities were effectively disregarded, removing those amounts from the total allocations as well.
 
-Note that if rescaling is enabled (`rescale_final_allocations=True`), then the final combined allocation will be rescaled to meet that strict limit in ``final_allocation_limit`. For example, if the previously calculated combined allocation added up to 2 billion, and the script is asked to rescale the total amount to 1 billion, then it will halve everyone's allocations to meet the limit and then use that as the final combined allocation.
-
-As an applied example, Combination 1 can allocate equal amounts of tokens to: anyone who is a top 20 holder of either Platinum or X1 Xen, or both. However, it does this without giving extra tokens to anyone who is a top 20 holder of both tokens.
+Note that if rescaling is enabled (`rescale_final_allocations=True`), then the final combined allocation will be rescaled to meet that strict limit in `final_allocation_limit`. For example, if the previously calculated combined allocation added up to 2 billion, and the script is asked to rescale the total amount to 1 billion, then it will halve everyone's allocations to meet the limit and then use that as the final combined allocation.
