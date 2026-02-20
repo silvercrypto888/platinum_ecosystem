@@ -29,11 +29,9 @@ Config options for `multi_allocation.py` (which is in the parent folder) are giv
 
 `mint_addresses`: list of mint addresses for tokens to take snapshots of
 
-`holders_filenames`: list of filenames for intermediate outputs of top 20 holders lists
+`token_names`: A list of token names. This can be informal (`['plat','xen']) and is only used for internal reference.
 
-`allocations_filenames`: list of filenames for intermediate outputs of allocations for each community
-
-`combined_allocations_filename`: filename for final list of combined allocations
+`combined_allocations_filename`: filename for final list of combined allocations output
 
 `base_allocation_per_community`: Base amount of tokens to allocate to each community
 
@@ -51,7 +49,9 @@ Config options for `multi_allocation.py` (which is in the parent folder) are giv
 
 `final_allocation_limit`: The targeted limit for the rescaled total allocations (summed across all holders in all communities). Only applicable if `rescale_final_allocations = True`.
 
-The main output is the final combined allocations csv file, which is `COMBINED_allocations.csv` in this applied example. This can be used for the airdrop tool in the parent folder, with appropriate configuration. There are also intermediate outputs of top 20 holder lists for each token, and intermediate allocations for each community.
+The main output is the final combined allocations csv file, which is `COMBINED_allocations.csv` in this applied example. This can be used for the airdrop tool in the parent folder, with appropriate configuration.
+
+There are also intermediate outputs of top 20 holder lists for each token, `top20_<token_name>.csv`, and intermediate allocations for each community, `allocations_partial_<token_name>.csv`.
 
 ## Possible Allocation Combination Methods
 
