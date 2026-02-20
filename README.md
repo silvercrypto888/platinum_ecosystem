@@ -51,4 +51,4 @@ If you are interested in learning to launch tokens with these moderately sophist
 
 _Disclaimer: All scripts are under development and have not been thoroughly tested. Some are even experimental. Please use them with caution._
 
-License: This code and guide is in the public domain. The Creative Commons License. However, this license only applies to the code and README files. the Platinum Ecosystem's copyrighted branding materials, images, and trademarked names are not in the public domain, with all rights reserved. The software is provided "as-is", without any warranty or liability, to the maximum extent permitted by law.
+License: This code and guide is in the public domain (CC0 1.0 Universal License). However, this license only applies to the code and README files. The Platinum Ecosystem's copyrighted branding materials, images, and trademarked names are not released to the public domain, with all rights reserved. The software is provided "as-is", without any warranty or liability, to the maximum extent permitted by law.
