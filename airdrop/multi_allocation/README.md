@@ -15,16 +15,27 @@ The file will use a folder (like multi_allocation by default) as a workspace.Her
 Config options for `multi_allocation.py` (which is in the parent folder) are given by editing the following variables, where order in lists should maintain a consistent ordering across tokens (e.g., PLAT is ordered 1st in all lists, XEN is ordered 2nd in all lists, etc.):
 
 `num_communities`: number of communities to take snapshots of
+
 `mint_addresses`: list of mint addresses for tokens to take snapshots of
+
 `data_folder`: name of workspace folder
+
 `holders_filenames`: list of filenames for intermediate outputs of top 20 hoders lists
+
 `allocations_filenames`: list of filenames for intermediate outputs of allocations for each community
+
 `combined_allocations_filename`: filename for final list of combined allocations
+
 `base_allocation_per_community`: Base amount of tokens to allocate to each community
+
 `community_multipliers`: list of multipliers to apply to each community, where the community's token allocation is the base allocation multiplied by its multiplier.
+
 `within_community_allocation`: "equal" for allocating the community's tokens equally across its top 20 members, or "proportional" for allocating them in proportion to holdings.
+
 `combine_allocations_method`: "max" for combining allocations across communities by giving each user only the maximum allocation they got for their participation in all communities, or "sum" for adding up all their allocations across all communities
+
 `rounding_decimals`: Number of decimal places to round token amounts for the final combined allocations.
+
 `excluded_addresses`: List of addresses, which will be excluded from all allocations. In this applied example, the incinerator and LP addresses are exluded.
 
 The main output is the final combined allocations csv file, which is "COMBINED_allocations.csv" in this applied example. This can be used for the airdrop tool in the parent folder, with appropriate configuration.
