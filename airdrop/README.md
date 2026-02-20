@@ -47,4 +47,4 @@ The game theory behind this: If a token is mintable, then an extractor can mint 
 
 *Note: This is recommended only for users who have at least some limited programming experience.*
 
-There is a more advanced script, `multi_allocation.py`, that allows you to get the 20 holders of multiple different token communities, and then calculate a combined allocation across users of all those communities. This could be a very powerful tool, since it allows you to target the top participants of multiple projects. It will use the multi_allocation folder as its data workspace. It needs significantly more setup. More documentation is [there](/airdrop/multi_allocation).
+There is a more advanced script, `multi_allocation.py`, that allows you to get the 20 holders of multiple different token communities, and then calculate a combined allocation across users of all those communities. This could be a very powerful tool, since it allows you to target the top participants of multiple projects. It will use the multi_allocation folder as its data workspace. It needs significantly more configuration. More documentation is [there](/airdrop/multi_allocation).
