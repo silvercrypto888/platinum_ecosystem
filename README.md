@@ -1,12 +1,12 @@
 # Platinum Ecosystem on X1 Blockchain, and Newbie Dev Guide
 This repo has two purposes:
 
-1. To document open-source code for the Platinum Ecosystem on the X1 Blockchain
+1. To document open-source code for the [Platinum Ecosystem](https://platinum-on-x1.gitbook.io/platinum/) on X1
 2. To serve as a Newbie Dev Guide for aspiring new X1 devs
 
-The guide will be very simple and assume minimal prior skills, with plenty of handholding. :\) The topics covered may go through minting simple tokens with no custom features, and then Token-2022 Extensions such as interest rates, and airdrops/snapshots for top 20 holders. However, this guide will likely go no further than that. This guide can allow aspiring X1 Builders to easily launch token ecosystems with extensions that they desire, like interest rates.
+The guide will be very simple and assume minimal prior skills, with plenty of handholding. :\) The topics covered may go through minting simple tokens with no custom features, and airdrops/snapshots for top 20 holders, and then finally Token-2022 Extensions such as interest rates. However, this guide will likely go no further than that. This guide can allow aspiring X1 Builders to easily launch token ecosystems with the extensions that they desire, like interest rates.
 
-This guide also shares some game theory on practices that can help builders to distinguish themselves from _extractors_ (shortsighted devs). This guide will tell you how to perform highly generous and competitive industry practices (airdrops and burned liquidity) to help attract a following in the X1 community!
+This guide also shares some game theory on practices that can help builders to seaparate and distinguish themselves from _extractors_ (shortsighted devs). This guide will tell you how to perform highly generous and competitive industry practices (airdrops and burned liquidity). This could help you build trust and attract a following in the X1 community.
 
 Basic exposure (but not much knowledge and familiarity) is expected with:
 1. Basic exposure to Windows and Command Prompt. This tutorial is primarily intended for Windows users.
@@ -19,7 +19,7 @@ Basic exposure (but not much knowledge and familiarity) is expected with:
 X1 is an SVM (Solana Virtual Machine) compatible blockchain, which means that devs can use the Solana CLI to build on X1. To get started with the CLI:
 
 1. [Install the Solana CLI](https://docs.solanalabs.com/cli/install) using instructions for your OS.
-2. Verify installation: Start Command Prompt (or Linux bash) and type `solana --version`.
+2. Verify installation: Start Command Prompt (or Linux bash) and type `solana --version`. (If this is not recognized even after you installed the Solana CLI, you may need to configure your PATH to add its installation folder.)
 3. Set RPC for X1: `solana config set --url https://rpc.mainnet.x1.xyz`
 4. Generate a keypair: `solana-keygen new`. You can record the secret phrase. Do not _ever_ share your secret phrase _or_ keypair with others.
 
@@ -39,7 +39,7 @@ _Disclaimer: Burning tokens is irreversible._ Please carefully examine LP tokens
 
 The game theory for why you would burn liquidity: it is a credible onchain signal that you can't withdraw all liquidity in a "rug pull". If an extractor withdraws all liquidity, then it can cause the token to become instantly worthless. This is why many users prefer burned liquidity.
 
-There is a very simple [airdrop script folder](/airdrop) into this repo. It allows the top 20 holders of a token to be captured via a snapshot, and experimentally allows minting additional usits of your token using scripts, to execute an airdrop. It requires Python to be installed in order to use the scripts.
+There is a very simple [airdrop script folder](/airdrop) into this repo. It allows the top 20 holders of a token to be captured via a snapshot, and experimentally allows minting additional units of your token using scripts, to execute an airdrop. It requires Python to be installed in order to use the scripts.
 
 ## Going Forward
 
@@ -51,4 +51,4 @@ If you are interested in learning to launch tokens with these moderately sophist
 
 _Disclaimer: All scripts are under development and have not been thoroughly tested. Some are even experimental. Please use them with caution._
 
-License: This code and guide is in the public domain. However, the Platinum Ecosystem's branding materials and name are not in the public domain. The software is provided "as-is", without any warranty or liability, to the maximum extent permitted by law.
+License: This code and guide is in the public domain. The Creative Commons License. However, this license only applies to the code and README files. the Platinum Ecosystem's copyrighted branding materials, images, and trademarked names are not in the public domain, with all rights reserved. The software is provided "as-is", without any warranty or liability, to the maximum extent permitted by law.
