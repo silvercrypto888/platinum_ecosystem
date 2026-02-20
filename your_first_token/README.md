@@ -42,11 +42,15 @@ Where the placeholder variables with `%` symbols will be automatically filled in
 
 Don't worry. Metadata is mutable: you have the authority to change it by default. This means you can always just change it later (assuming you don't deliberately revoke your authority).
 
-If you later want to update the metadata (after first initialization): run the `update_metadata.bat` script, then enter the appropriate variables again with updated values. It will run:
+If you later want to update the metadata (after first initialization):
 
-`spl-token update-metadata %MINT_ADDRESS% name "%T_NAME%"\\
-spl-token update-metadata %MINT_ADDRESS% symbol "%T_TICKER%"\\
-spl-token update-metadata %MINT_ADDRESS% uri "%T_URI%"`
+Run the `update_metadata.bat` script, then enter the appropriate variables again with updated values. It will run:
+
+```
+spl-token update-metadata %MINT_ADDRESS% name "%T_NAME%"
+spl-token update-metadata %MINT_ADDRESS% symbol "%T_TICKER%
+spl-token update-metadata %MINT_ADDRESS% uri "%T_URI%"
+```
 
 Where the placeholder variables with `%` symbols will be automatically filled in with the appropriate values.
 
