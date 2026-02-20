@@ -12,7 +12,7 @@ The script will use a folder (like `multi_allocation` by default) as a workspace
 
 ## Config
 
-Config options for `multi_allocation.py` (which is in the parent folder) are given by editing the following variables, where order in almost all lists should maintain a consistent ordering across tokens (e.g., Platinum is ordered 1st in all lists, Xen on X1 is ordered 2nd in all lists, etc.). The only excepion is `excluded_addresses`, where order doesn;t matter and which doesn't need to be the same length as the number of communities.
+Config options for `multi_allocation.py` (which is in the parent folder) are given by editing the following variables, where order in almost all lists should maintain a consistent ordering across tokens (e.g., Platinum is ordered 1st in all lists, Xen on X1 is ordered 2nd in all lists, etc.). The only excepion is `excluded_addresses`, where order doesn't matter, and which doesn't need to be the same length as the number of communities.
 
 Config variables:
 
@@ -38,7 +38,7 @@ Config variables:
 
 `rounding_decimals`: Number of decimal places to round token amounts for the final combined allocations.
 
-`excluded_addresses`: List of addresses, which will be excluded from all allocations. In this applied example, the incinerator and LP addresses are exluded.
+`excluded_addresses`: List of addresses which will be excluded from all allocations. In this applied example, the incinerator and LP addresses are excluded.
 
 The main output is the final combined allocations csv file, which is `"COMBINED_allocations.csv"` in this applied example. This can be used for the airdrop tool in the parent folder, with appropriate configuration.
 
