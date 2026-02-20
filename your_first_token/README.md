@@ -6,7 +6,7 @@ This guide will launch a very simple Token-2022 token with no custom logic, usin
 
 # Creating the token
 
-You can create the token by running create_token.bat. It will create the token on X1 and create mint_address.txt, which has your token's _mint address_. By default, it will use a precision of 9 decimal places (which is very common).
+You can create the token by running `create_token.bat`. It will create the token on X1 and create `mint_address.txt`, which has your token's _mint address_. By default, it will use a precision of 9 decimal places (which is very common).
 
 The batch file has lots of logging code, but the key command is just this:
 
@@ -29,7 +29,7 @@ This part is tedious, but it's very highly recommended. That's because it's need
 
 ## Initializing the Metadata
 
-1. Run create_metadata.bat. It will read mint_address.txt (if generated earlier). Then it will ask you for the name, ticker, and metadata URI.
+1. Run `create_metadata.bat` (not to be confused with `update_metadata.bat`). It will read `mint_address.txt` (if generated earlier). Then it will ask you for the name, ticker, and metadata URI.
 2. You provide these fields by typing (or copy-pasting) them and then pressing "Enter" for each prompt. When prompted, you should enter the metadata URI for the json file that you had earlier pinned to IPFS.
 
 The batch file's key role is to run the command:
@@ -38,18 +38,20 @@ The batch file's key role is to run the command:
 
 Where the placeholder variables with `%` symbols will be automatically filled in with the appropriate values.
 
-# What if the metadata initialization got screwed up, or if I wanted to change something later?
+# What if the metadata initialization got screwed up? Or if I wanted to change metadata later?
 
-Don't worry. Metadata is mutable by default. This means you can always just change it later (assuming you don't go out of your way to revoke your authority).
+Don't worry. Metadata is mutable: you have the authority to change it by default. This means you can always just change it later (assuming you don't deliberately revoke your authority).
 
-If you later want to update the metadata (after first initialization) using the create_metadata.bat script, you will first need to edit it as follows:
+If you later want to update the metadata (after first initialization): run the `update_metadata.bat` script, then run it and enter the metadata fields again, with updated values. It will run:
 
-1. Find the line `spl-token initialize-metadata %MINT_ADDRESS% "%T_NAME%" "%T_TICKER%" "%T_URI%"`
-2. Replace with `spl-token update-metadata %MINT_ADDRESS% "%T_NAME%" "%T_TICKER%" "%T_URI%"`
-3. Save create_metadata.bat, then run it again and enter the metadata fields again, with updated values.
+`spl-token update-metadata %MINT_ADDRESS% name "%T_NAME%"
+spl-token update-metadata %MINT_ADDRESS% symbol "%T_TICKER%"
+spl-token update-metadata %MINT_ADDRESS% uri "%T_URI%"`
+
+Where the placeholder variables with `%` symbols will be automatically filled in with the appropriate values.
 
 # What next?
 
-You only created the token, but it currently has a supply of 0, because none of it was issued yet. You may be asking how to issue a larger supply to get this token into the hands of more holders. That is a _very_ good question.
+You created the token, but currently it has a supply of 0, because none of it was minted yet. You may be asking how to issue a larger supply to get this token into the hands of more holders. That is a _very_ good question.
 
 One way to do that is to explore the [snapshot and airdrop tool](../airdrop) in this repo to achieve a wide initial distribution by airdropping the token to the top 20 holders of another existing token whose community you really like. This way, you won't have to create your own community and then distribute the tokens manually from scratch.
