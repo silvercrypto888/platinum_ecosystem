@@ -13,7 +13,7 @@ The Battle Platform for X1 uses precise mathematical laws of network scaling and
 
 ![HYPERINFLATION, the JUGGLING TYRANT](images/1.png)
 
-# Power Levels
+## Power Levels
 
 The Battle Platform for X1 uses quadratic power scaling. This means that power is proportional not to quantity, but to _quantity squared_. This creates a _strong parallel_ between the quadratic scaling of [Metcalfe's Law](https://en.wikipedia.org/wiki/Metcalfe's_law) and [Lanchester's Square Law](https://en.wikipedia.org/wiki/Lanchester's_laws), to create a _Metcalfe-Lanchester power score_.
 
@@ -27,7 +27,7 @@ If you play strategy games, you have likely come up against Lanchester's Square 
 
 It's because Lanchester's Square Law was operating in the background as an _emergent property_, giving those armies a very high combat effectiveness through quadratic scaling, even though it was never explicitly coded into the game.
 
-# Battle Simulation: Loss
+## Battle Simulation: Loss
 
 HYPERINFLATION has an insanely high score: _1 quadrillion_ (1,000,000,000,000,000, or $10^{15}$)! How is it even possible to stand against him? The answer is through quadratic power scaling.
 
@@ -50,7 +50,7 @@ Defeat! The HYPERINFLATION remains standing.
 Fighters only reached 888,888,888,000,000.0 power.
 Billions of people are living in a clown show.`
 
-# Battle Simulation: Win
+## Battle Simulation: Win
 
 But what if X1 had 15 million users instead?
 
@@ -77,7 +77,7 @@ Lanchester's Laws _greatly simplify_ combat simulation for massive battles invol
 
 ![The Alchemist holds the entire world in his hands. Did you notice that there was a burning Phoenix nearby? Interesting...](images/4.png)
 
-# Possible Extensions
+## Possible Extensions
 
 The Battle Platform for X1 is still in _extremely early_ development. The combat logic itself is elegant and simple, but right now it only features arbitrary parameters, and one battle.
 
