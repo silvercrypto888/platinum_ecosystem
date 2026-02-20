@@ -34,3 +34,4 @@ FOR /F "usebackq tokens=1,2 delims=," %%A IN (!INPUT_FILE!) DO (
 
 echo Token minting complete.
 ENDLOCAL
+pause
