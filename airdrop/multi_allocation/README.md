@@ -5,8 +5,8 @@ This tool can calculate a snapshot and allocation across holders of many tokens.
 This tool does multiple things in sequence:
 
 1. Gets the 20 holders for each token.
-2. Calculates an allocation for top 20 holders in each individual community
-3. Combines each community allocation (with specfified methods/multipliers), to generate a final combined allocation for many holders across all those communities.
+2. Calculates an intermediate allocation for top 20 holders in each individual community. Each intermediate allocation is for the top 20 holders of each community, based solely on their holding in that particular community.
+3. Calculates each holder's combined final allocation based on their intermediate allocations across many communities (with the methods: sum or max), to generate a final combined allocation for many holders across all those communities.
 
 The file will use a folder (like multi_allocation by default) as a workspace.Here, it will save the top 20 holders list and allocations list for each community, as well as the final combined allocation, using csv files.
 
