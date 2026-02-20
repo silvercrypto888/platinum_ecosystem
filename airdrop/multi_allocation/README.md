@@ -29,7 +29,7 @@ Config options for `multi_allocation.py` (which is in the parent folder) are giv
 
 `mint_addresses`: list of mint addresses for tokens to take snapshots of
 
-`token_names`: A list of token names. This can be informal (`['plat','xen']) and is only used for internal reference.
+`token_names`: A list of token names. This can be informal (`['plat','xen']`) and is only used for internal reference
 
 `combined_allocations_filename`: filename for final list of combined allocations output
 
@@ -37,17 +37,17 @@ Config options for `multi_allocation.py` (which is in the parent folder) are giv
 
 `community_multipliers`: list of multipliers to apply to each community. The community's token allocation is the base allocation multiplied by its multiplier.
 
-`within_community_allocation`: "equal" for allocating each community's tokens equally across its top 20 members, or "proportional" for allocating the community's tokens across its users in proportion to holdings.
+`within_community_allocation`: "equal" for allocating each community's tokens equally across its top 20 members, or "proportional" for allocating the community's tokens across its users in proportion to holdings
 
-`combine_allocations_method`: "max" for combining allocations across communities by giving each user _only the maximum allocation_ they got for their participation in all communities, or "sum" for _adding up_ all their allocations across all communities
+`combine_allocations_method`: Method for combining users' allocations based on their holding across communities. "max" gives each user _only the maximum allocation_ among their intermediate allocations in all their holdings across communities, or "sum" for _adding up_ all their allocations across all communities
 
-`rounding_decimals`: Number of decimal places to round token amounts for the final combined allocations.
+`rounding_decimals`: Number of decimal places to round token amounts for the final combined allocations
 
-`excluded_addresses`: List of addresses which will be excluded from all allocations. In this applied example, the incinerator and LP addresses are excluded.
+`excluded_addresses`: List of addresses which will be excluded from all allocations. In this applied example, the incinerator and LP addresses are excluded
 
-`rescale_final_allocations`: True/False. False by default. If True, it rescales the final allocations to meet a strict limit in `final_allocation_limit`.
+`rescale_final_allocations`: True/False. False by default. If True, it rescales the final allocations to meet a strict limit in `final_allocation_limit`
 
-`final_allocation_limit`: The targeted limit for the rescaled total allocations (summed across all holders in all communities). Only applicable if `rescale_final_allocations = True`.
+`final_allocation_limit`: The targeted limit for the rescaled total allocations (summed across all holders in all communities). Only applicable if `rescale_final_allocations = True`
 
 The main output is the final combined allocations csv file, which is `COMBINED_allocations.csv` in this applied example. This can be used for the airdrop tool in the parent folder, with appropriate configuration.
 
