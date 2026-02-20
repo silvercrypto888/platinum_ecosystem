@@ -51,7 +51,7 @@ Config options for `multi_allocation.py` (which is in the parent folder) are giv
 
 `final_allocation_limit`: The targeted limit for the rescaled total allocations (summed across all holders in all communities). Only applicable if `rescale_final_allocations = True`.
 
-The main output is the final combined allocations csv file, which is `COMBINED_allocations.csv` in this applied example. This can be used for the airdrop tool in the parent folder, with appropriate configuration.
+The main output is the final combined allocations csv file, which is `COMBINED_allocations.csv` in this applied example. This can be used for the airdrop tool in the parent folder, with appropriate configuration. There are also intermediate outputs of top 20 holder lists for each token, and intermediate allocations for each community.
 
 ## Possible Allocation Combination Methods
 
@@ -64,6 +64,8 @@ There are four different allocation combinations of the different options for `w
 3. `within_community_allocation = "proportional"`, `combine_allocations_method = "max"`: This allocates tokens proportionally across top 20 holders in each community, and the allocations are combined for each user to only consider their maximum allocation across all communities. This effectively means that if a user is a very high top-ranked holder in any one community, they could get an especially high allocation. But no extra allocations for their less impressive holdings in other communities (even if top 20).
 
 4. `within_community_allocation = "proportional"`, `combine_allocations_method = "sum"`: This allocates tokens proportionally across top 20 holders in each community, and the allocations are combined for each user to sum their allocations for all communities. This effectively means that if a user is a very high-ranked holder in one community, or if they are high-ranked enough in many different communities (top 20 holder in each), they could get an especially high allocation.
+
+### Notes on Allocation Methods
 
 As an applied example, Combination 1 can allocate equal amounts of tokens to: anyone who is a top 20 holder of either Platinum or X1 Xen, or both. However, it does this without giving extra tokens to anyone who is a top 20 holder of both tokens.
 
