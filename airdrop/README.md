@@ -37,7 +37,7 @@ Double check the realized airdrop amounts. You can use an explorer such as [Fort
 
 ## Revoking Mint Authority
 
-Once you have minted and distributed all desired tokens, you can revoke the mint authority by opening Command Prompt and running this command: `spl-token authorize <MINT ADDRESS> mint --disable`, replacing `<MINT ADDRESS>` with your token's actual mint address. _Disclaimer: This will permanently and irreversibly remove your ability to mint new tokens._
+Once you have minted and distributed all desired tokens, you can revoke the mint authority by opening Command Prompt and running this command: `spl-token authorize <MINT ADDRESS> mint --disable`, replacing `<MINT ADDRESS>` with your token's actual mint address. _Disclaimer: This will permanently and irreversibly remove your ability to mint more tokens for the mint address you provided._
 
 Revoking mint authority is _extremely_ important for establishing trust with users. Mintable tokens are a huge red flag for many potential users. The only exception is an extremely compelling reason for allowing mints, such as custom logic for fair permissionless minting.
 
