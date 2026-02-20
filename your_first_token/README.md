@@ -30,7 +30,7 @@ This part is tedious, but it's very highly recommended. That's because it's need
 ### Initializing the Metadata
 
 1. Run `create_metadata.bat` (not `update_metadata.bat`). It will read `mint_address.txt` (if generated earlier). Then it will ask you for the name, ticker, and metadata URI.
-2. You provide these fields by typing (or copy-pasting) them and then pressing "Enter" for each prompt. When prompted, you should enter the metadata URI for the json file that you had earlier pinned to IPFS.
+2. You provide these fields by typing (or copy-pasting) them and then pressing "Enter" for each prompt. When prompted for metadata URI, enter the metadata URI for the json file that you had earlier pinned to IPFS.
 
 The batch file's key role is to run the command:
 
