@@ -39,7 +39,7 @@ Config options for `multi_allocation.py` (which is in the parent folder) are giv
 
 `within_community_allocation`: "equal" for allocating each community's tokens equally across its top 20 members, or "proportional" for allocating the community's tokens across its users in proportion to holdings
 
-`combine_allocations_method`: Method for combining users' allocations based on their holding across communities. "max" gives each user _only the maximum allocation_ among their intermediate allocations in all their holdings across communities, or "sum" for _adding up_ all their allocations across all communities
+`combine_allocations_method`: Method for combining users' allocations based on their holding across communities. "max" gives each user _only the maximum allocation_ among their intermediate allocations in all their holdings across communities, or "sum" for _adding up_ all their intermediate allocations across all communities
 
 `rounding_decimals`: Number of decimal places to round token amounts for the final combined allocations
 
@@ -57,18 +57,18 @@ There are also intermediate outputs of top 20 holder lists for each token, `top2
 
 There are four different allocation combinations of the different options for `within_community_allocation` and `combine_allocations_method`:
 
-1. `within_community_allocation = "equal"`, `combine_allocations_method = "max"`: This allocates tokens equally across top 20 holders in each community, and the allocations are combined for each user to only consider their maximum allocation across all communities. This effectively rewards people who are top 20 holders in one or more communities, but with no extra rewards for being a top 20 holder in multiple communities.
+1. `within_community_allocation = "equal"`, `combine_allocations_method = "max"`: This allocates tokens equally across top 20 holders in each community, and the intermediate allocations are combined for each user to only consider their maximum allocation across all communities. This effectively rewards people who are top 20 holders in one or more communities, but with no extra rewards for being a top 20 holder in multiple communities.
 
-2. `within_community_allocation = "equal"`, `combine_allocations_method = "sum"`: This allocates tokens equally across top 20 holders in each community, and the allocations are combined for each user to sum their allocations for all communities. This effectively means that if a user is a top 20 holder in many communities, they could get additional allocations for their role in each of those communities.
+2. `within_community_allocation = "equal"`, `combine_allocations_method = "sum"`: This allocates tokens equally across top 20 holders in each community, and the intermediate allocations are combined for each user to sum their allocations for all communities. This effectively means that if a user is a top 20 holder in many communities, they could get additional allocations for their role in each of those communities.
   
-3. `within_community_allocation = "proportional"`, `combine_allocations_method = "max"`: This allocates tokens proportionally across top 20 holders in each community, and the allocations are combined for each user to only consider their maximum allocation across all communities. This effectively means that if a user is a very high top-ranked holder in any one community, they could get an especially high allocation. But no extra allocations for their less impressive holdings in other communities (even if top 20).
+3. `within_community_allocation = "proportional"`, `combine_allocations_method = "max"`: This allocates tokens proportionally across top 20 holders in each community, and the intermediate allocations are combined for each user to only consider their maximum allocation across all communities. This effectively means that if a user is a very high top-ranked holder in any one community, they could get an especially high allocation. But no extra rewards for their other lower intermediate allocation for holdings in other communities (even if in top 20 holders there).
 
-4. `within_community_allocation = "proportional"`, `combine_allocations_method = "sum"`: This allocates tokens proportionally across top 20 holders in each community, and the allocations are combined for each user to sum their allocations for all communities. This effectively means that if a user is a very high-ranked holder in one community, or if they are high-ranked enough in many different communities (top 20 holder in each), they could get an especially high allocation.
+4. `within_community_allocation = "proportional"`, `combine_allocations_method = "sum"`: This allocates tokens proportionally across top 20 holders in each community, and the intermediate allocations are combined for each user to sum their allocations for all communities. This effectively means that if a user is a very high-ranked holder in one community, or if they are high-ranked enough in many different communities (top 20 holder in each), they could get an especially high allocation.
 
 ### Notes on Allocation Methods
 
 As an applied example, Combination 1 can allocate equal amounts of tokens to: anyone who is a top 20 holder of either Platinum or X1 Xen, or both. However, it does this without giving extra tokens to anyone who is a top 20 holder of both tokens.
 
-Note that if `combine_allocations_method = "max"`, then the sum over final combined allocations will likely not be equal to the sum of allocations for the communities themselves. This is because individuals' lower qualifying allocations in other communities were effectively disregarded, removing those amounts from the total allocations as well.
+Note that if `combine_allocations_method = "max"`, then the sum over final combined allocations will likely not be equal to the sum of intermediate allocations for the communities themselves. This is because individuals' lower qualifying allocations in other communities were effectively disregarded, removing those amounts from the total allocations as well.
 
 Note that if rescaling is enabled (`rescale_final_allocations=True`), then the final combined allocation will be rescaled to meet that strict limit in `final_allocation_limit`. For example, if the previously calculated combined allocation added up to 2 billion, and the script is asked to rescale the total amount to 1 billion, then it will halve everyone's allocations to meet the limit and then use that as the final combined allocation.
