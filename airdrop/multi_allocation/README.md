@@ -47,9 +47,9 @@ Config options for `multi_allocation.py` (which is in the parent folder) are giv
 
 `excluded_addresses`: List of addresses which will be excluded from all allocations. In this applied example, the incinerator and LP addresses are excluded.
 
-`rescale_final_allocations`: True/false. If True, it rescales the final allocations to meet a strict limit.
+`rescale_final_allocations`: True/False. False by default. If True, it rescales the final allocations to meet a strict limit in `final_allocation_limit`.
 
-`final_allocation_limit`: The targeted limit for the total allocations (summed across all holders in all communities)
+`final_allocation_limit`: The targeted limit for the rescaled total allocations (summed across all holders in all communities). Only applicable if `rescale_final_allocations = True`.
 
 The main output is the final combined allocations csv file, which is `COMBINED_allocations.csv` in this applied example. This can be used for the airdrop tool in the parent folder, with appropriate configuration.
 
