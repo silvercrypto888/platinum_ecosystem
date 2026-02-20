@@ -17,8 +17,7 @@ if(read_config_from_file == False):
         "ACor5a1JMRsnbMKcibnNZfbY5nfiBg3TwRvWSNUE2DVb",
         "y1KEaaWVoEfX2gH7X1Vougmc9yD1Bi2c9VHeD7bDnNC"
                   ]
-    holders_filenames = ["top20_plat.csv","top20_xen.csv"]
-    allocations_filenames = ["plat_allocations.csv", "xen_allocations.csv"]
+    token_names = ["plat", "xen"]
     combined_allocations_filename = "COMBINED_allocations.csv"
     base_allocation_per_community = 16_000_000_000
     community_multipliers = [1,1]
@@ -41,7 +40,7 @@ else:
 
 # List of variable names you want to save
 to_save = ['data_folder', 'read_config_from_file', 'config_filename','num_communities',
-           'mint_addresses','holders_filenames','allocations_filenames','combined_allocations_filename',
+           'mint_addresses','token_names','combined_allocations_filename',
            'base_allocation_per_community','community_multipliers','within_community_allocation',
            'combine_allocations_method','rounding_decimals','excluded_addresses',
            'rescale_final_allocations', 'final_allocation_limit'] 
@@ -61,8 +60,8 @@ print("Backed up config options in "+ data_folder+config_filename)
 allocations_by_community = [base_allocation_per_community * weight for weight in community_multipliers]
 
 ## edits filenames to store the files in the data subfolder
-holders_filenames = [data_folder + file for file in holders_filenames]
-allocations_filenames = [data_folder + file for file in allocations_filenames]
+holders_filenames = [data_folder + "top20_"+ name + ".csv" for name in token_names]
+allocations_filenames = [data_folder + "allocations_partial_"+ name + ".csv" for name in token_names]
 combined_allocations_filename = data_folder + combined_allocations_filename
 
 
