@@ -6,7 +6,7 @@ This repo has two purposes:
 
 The guide will be very simple and assume minimal prior skills, with plenty of handholding. :\) The topics covered may go through minting simple tokens with no custom features, and airdrops/snapshots for top 20 holders, and then finally Token-2022 Extensions such as interest rates. However, this guide will likely go no further than that. This guide can allow aspiring X1 Builders to easily launch token ecosystems with the extensions that they desire, like interest rates.
 
-This guide also shares some game theory on practices that can help builders to seaparate and distinguish themselves from _extractors_ (shortsighted devs). This guide will tell you how to perform highly generous and competitive industry practices (airdrops and burned liquidity). This could help you build trust and attract a following in the X1 community.
+This guide also shares some game theory on practices to help builders to separate and distinguish themselves from _extractors_ (shortsighted devs). This guide will tell you how to perform highly generous and competitive industry practices (airdrops and burned liquidity). This could help you build trust and attract a following in the X1 community.
 
 Basic exposure (but not much knowledge and familiarity) is expected with:
 1. Basic exposure to Windows and Command Prompt. This tutorial is primarily intended for Windows users.
