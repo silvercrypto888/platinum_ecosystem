@@ -1,18 +1,20 @@
 # Snapshot Tool for Multiple Tokens
 
-This tool can calculate a snapshot and allocation across holders of many tokens. As an applied example, it can allocate an equal amount of tokens to anyone who is a top 20 holder of either Platinum or X1 Xen, but without giving extra tokens to anyone who is a top 20 holder of both tokens.
+The `multi_allocation.py` script can calculate a snapshot and allocation across holders of many tokens. As an applied example, it can allocate equal amounts of tokens to: anyone who is a top 20 holder of either Platinum or X1 Xen, or both. However, it does this without giving extra tokens to anyone who is a top 20 holder of both tokens.
 
-This tool does multiple things in sequence:
+This script does multiple things in sequence:
 
 1. Gets the 20 holders for each token.
 2. Calculates an intermediate allocation for top 20 holders in each individual community. Each intermediate allocation is for the top 20 holders of each community, based solely on their holding in that particular community.
 3. Calculates each holder's combined final allocation based on their intermediate allocations across many communities (with the methods: sum or max), to generate a final combined allocation for many holders across all those communities.
 
-The file will use a folder (like `multi_allocation` by default) as a workspace. Here, it will save the top 20 holders list and allocations list for each community, as well as the final combined allocation, using csv files.
+The script will use a folder (like `multi_allocation` by default) as a workspace. Here, it will save the top 20 holders list and allocations list for each community, as well as the final combined allocation, using csv files.
 
 ## Config
 
-Config options for `multi_allocation.py` (which is in the parent folder) are given by editing the following variables, where order in lists should maintain a consistent ordering across tokens (e.g., PLAT is ordered 1st in all lists, XEN is ordered 2nd in all lists, etc.):
+Config options for `multi_allocation.py` (which is in the parent folder) are given by editing the following variables, where order in almost all lists should maintain a consistent ordering across tokens (e.g., Platinum is ordered 1st in all lists, Xen on X1 is ordered 2nd in all lists, etc.). The only excepion is `excluded_addresses`, where order doesn;t matter and which doesn't need to be the same length as the number of communities.
+
+Config variables:
 
 `num_communities`: number of communities to take snapshots of
 
