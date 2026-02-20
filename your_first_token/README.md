@@ -1,6 +1,6 @@
 # Your First Token
 
-This guide will launch a very simple Token-2022 token with no custom logic. It uses batch files to operate the Solana CLI.
+This guide will launch a very simple Token-2022 token with no custom logic, using the Solana CLI via batch files.
 
 **Prerequisites:** You must have already installed the Solana CLI, with the RPC and keypair configured appropriately. You must also have some XNT in your address (the one associated with your Solana CLI keypair) to cover gas fees.
 
