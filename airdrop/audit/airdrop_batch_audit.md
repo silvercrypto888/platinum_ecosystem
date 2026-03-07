@@ -1,3 +1,18 @@
+# Security and Syntax Audit: `airdrop.bat`
+
+## 1. Validated Logic
+* **Dynamic Variables:** The script utilizes `set /p` to prompt the user for necessary variables, perfectly fulfilling the goal of making the tool accessible to non-technical users without requiring them to edit the source code.
+* **Formatting:** The cosmetic issue with the `RPC_URL` prompt has been fully resolved. The console will now display a clean, readable text prompt.
+* **CLI Configuration:** The environment setup correctly passes the dynamically inputted `--keypair` and `--url` variables with quotes, safeguarding against file paths that contain spaces.
+* **Execution & Parsing:** The script correctly uses delayed expansion (`!`) for variables within the `FOR /F` loop, successfully parses the CSV structure, and properly orders the positional arguments for the `spl-token create-account` command.
+
+## 2. Audit Findings
+* **Status: Pass.** The script is functionally sound, correctly formatted, and ready for deployment.
+* **Formatting Note:** When saving this code into your final `.bat` file, ensure that your text editor is using standard spaces or tabs for indentation. Copying and pasting can sometimes introduce non-breaking spaces, which the Windows command line interpreter might struggle to read.
+
+## 3. Audited Code Reference
+
+```bat
 @echo off
 SETLOCAL EnableDelayedExpansion
 
