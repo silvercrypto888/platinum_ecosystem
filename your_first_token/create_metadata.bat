@@ -9,7 +9,8 @@ if not exist mint_address.txt (
 )
 
 :: Read the first line of the file as the Mint Address
-set /p MINT_ADDRESS=<mint_address.txt
+:: FIX: Use FOR /F to extract only the address and drop any trailing spaces from the file
+for /f %%i in (mint_address.txt) do set MINT_ADDRESS=%%i
 echo [INFO] Found Mint Address: %MINT_ADDRESS%
 
 :: Prompt user for input

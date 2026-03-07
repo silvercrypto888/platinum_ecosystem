@@ -3,7 +3,10 @@ SETLOCAL EnableDelayedExpansion
 SET logfile=token_creation_log.txt
 SET mintfile=mint_address.txt
 
-spl-token create-token --program-id TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb --decimals 9 --enable-metadata  > %logfile% 2>&1
+:: FIX: Clear the variable to prevent false positives on consecutive runs
+SET "MINT_ADDRESS="
+
+spl-token create-token --program-id TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb --decimals 9 --enable-metadata > %logfile% 2>&1
 
 FOR /F "tokens=2" %%i IN ('findstr "Address:" %logfile%') DO (
     SET MINT_ADDRESS=%%i
