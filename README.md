@@ -49,6 +49,10 @@ Future simple guides could feature various Token-2022 Extensions. These extensio
 
 If you are interested in learning to launch tokens with these moderately sophisticated behaviors, then _stay tuned_.
 
+## Development and Audits
+
+This code was mostly written and audited using Google Gemini 3. If a project has AI audits, they will be visible as .md files in the `audit` subfolder of that project.
+
 ## Legalese
 
 _Disclaimer: All scripts are under development and have not been thoroughly tested. Some are even experimental. Please use them with caution._
