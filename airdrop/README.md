@@ -24,8 +24,8 @@ Note: Keep in mind that the top 20 holders can include the incinerator address, 
 
 **WARNING: `airdrop.bat` is extremely experimental and very early in development. `airdrop.bat` is _only_ intended for a _brand new minted token_, where no one yet holds any tokens. Otherwise, if there are existing holders, it will not work reliably at all.** This is because it attempts to create token accounts for each wallet address in `allocations.csv`. But if some of those wallets already have token balances (and therefore token accounts), then the script _will_ run into errors and/or unpredictable behavior. If you want to modify it for tokens with existing holders, you might want to code extensive extra logic, to check if users already have token accounts, while also making new token accounts for wallets without them. **You have been warned.**
 
-1. _(Experimental)_ Edit `airdrop.bat` to replace `MINT_ADDRESS` with _your own token's mint address_. Also, edit `PAYER_KEYPAIR` and `INPUT_FILE` to set your own keypair file and input file (allocations.csv), possibly using full file paths.
-2. _(Experimental)_ Run `airdrop.bat`.
+1. _(Experimental)_ Run `airdrop.bat`.
+2. _(Experimental)_ follow the prompts to enter the RPC URL, your mint address, your own keypair file, and your input file (allocations.csv), possibly using full file paths.
 
 ## Alternative Manual Airdrop (no batch file)
 
@@ -47,4 +47,4 @@ The game theory behind this: If a token is mintable, then an extractor can mint 
 
 *Note: This is recommended only for users who have at least some limited programming experience.*
 
-There is a more advanced script, `multi_allocation.py`, that allows you to get the 20 holders of multiple different token communities, and then calculate a combined allocation across users of all those communities. This could be a very powerful tool, since it allows you to target the top participants of multiple projects. It will use the multi_allocation folder as its data workspace. It needs significantly more configuration. More documentation is [there](/airdrop/multi_allocation).
+There is a more advanced script, `multi_allocation.py`, that allows you to get the 20 holders of multiple different token communities, and then calculate a combined allocation across users of all those communities. This could be a powerful tool, since it allows you to target the top participants of multiple projects. It will use the multi_allocation folder as its data workspace. It needs significantly more configuration. More documentation is [there](/airdrop/multi_allocation).
