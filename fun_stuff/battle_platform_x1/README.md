@@ -1,5 +1,7 @@
 # Battle Platform for X1
 
+Note: The Battle Platform for X1 is still in _extremely early_ development. The combat logic itself is elegant and simple, but right now it only features arbitrary parameters, and one battle.
+
 The Battle Platform for X1 is a lightweight game project to:
 
 1. Demonstrate the benefits of network effects for the X1 Blockchain in a fun, gamified way.
@@ -78,10 +80,6 @@ Lanchester's Laws _greatly simplify_ combat simulation for massive battles invol
 ![The Alchemist holds the entire world in his hands. Did you notice that there was a burning Phoenix nearby? Interesting...](images/4.png)
 
 ## Possible Extensions
-
-The Battle Platform for X1 is still in _extremely early_ development. The combat logic itself is elegant and simple, but right now it only features arbitrary parameters, and one battle.
-
-Possible Extensions:
 
 1. The battle simulator could later be populated with realistic numbers by querying the X1 Blockchain metrics for users and AI agents. A measure of "Quality" can be calculated from onchain burn statistics of multiple tokens, including XNT, Xen, and/or Platinum.
 2. Extended Game Campaign consisting of multiple engagements, including a combination of both minor Skirmishes against minibosses, as well as major Battles. Finally, this could culminate in X1's dramatic victory over HYPERINFLATION himself.
