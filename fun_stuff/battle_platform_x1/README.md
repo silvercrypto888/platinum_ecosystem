@@ -9,8 +9,6 @@ The Battle Platform for X1 is a lightweight game project to:
 
 It is a battle simulator to run future scenarios where the _entire X1 community_ fights against a terrifying final boss monster: **_HYPERINFLATION, the JUGGLING TYRANT._** He is a clown who juggles the entire world in one hand and a brick of worthless paper money in the other hand. He cruelly taunts and humiliates _entire populations_ for his own twisted entertainment. As long as he is standing, people around the world live in a _clown show_. HYPERINFLATION is partially responsible for the evils of past economic inflation, like the wheelbarrows of worthless paper money in the Weimar Republic (Germany, 1923).
 
-HYPERINFLATION also represents something far larger, something that's hidden and even sinister: he is a symbol for the systematic destruction of value through high quantity, but terrible quality. These days, far too many posers and crying boys try to rule over genuine builders. Far too many firms ship broken products that suffer from shrinkflation. The X1 community is engaged in a fight against _mediocrity itself_.
-
 The Battle Platform for X1 uses precise mathematical laws of network scaling and military tactics to calculate scenarios where X1 can grow so large, it can even challenge HYPERINFLATION itself, to save the entire world from his wrath.
 
 ![HYPERINFLATION, the JUGGLING TYRANT](images/1.png)
