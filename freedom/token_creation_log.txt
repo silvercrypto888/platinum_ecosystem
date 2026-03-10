@@ -1,0 +1,8 @@
+Creating token 3B8o5tJ6J1oipMKVzEYEB9ut7LCUhigy7966bGLxETtW under program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb
+To initialize metadata inside the mint, please run `spl-token initialize-metadata 3B8o5tJ6J1oipMKVzEYEB9ut7LCUhigy7966bGLxETtW <YOUR_TOKEN_NAME> <YOUR_TOKEN_SYMBOL> <YOUR_TOKEN_URI>`, and sign with the mint authority.
+
+Address:  3B8o5tJ6J1oipMKVzEYEB9ut7LCUhigy7966bGLxETtW
+Decimals:  3
+
+Signature: 3fuRuvsDSjdgJJUmDVZQAV1DsnLupoNiVkjyviYXP3eDVq8mpqKdddCWZ7bhWk4frForprncKokVfMdb33yjKJav
+
